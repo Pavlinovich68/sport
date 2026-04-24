@@ -55,14 +55,15 @@ class MinIOClient {
 
     const objectName = `${Date.now()}-${fileName}`;
 
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const etag: any = await this.client.putObject(
+    const etag = await this.client.putObject(
       this.bucket,
       objectName,
       file,
+      undefined,
+      { "Content-Type": contentType },
     );
 
-    return { etag, objectName };
+    return { etag: String(etag), objectName };
   }
 
   async getFileUrl(objectName: string): Promise<string> {
@@ -80,14 +81,14 @@ class MinIOClient {
     await this.client.removeObject(this.bucket, objectName);
   }
 
-  async listFiles(prefix = ""): Promise<any[]> {
+  async listFiles(prefix = ""): Promise<BucketItem[]> {
     await this.initialize();
 
     return new Promise((resolve, reject) => {
-      const objects: any[] = [];
+      const objects: BucketItem[] = [];
       const stream = this.client.listObjects(this.bucket, prefix, true);
 
-      stream.on("data", (obj) => objects.push(obj));
+      stream.on("data", (obj: BucketItem) => objects.push(obj));
       stream.on("end", () => resolve(objects));
       stream.on("error", reject);
     });
