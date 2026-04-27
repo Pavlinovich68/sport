@@ -5,21 +5,43 @@ import type { CarouselRef } from "antd/es/carousel";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import { Carousel } from "antd";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 
 type HomeCarouselProps = {
   slides: HomeCarouselSlide[];
 };
 
+type SlideDirection = "forward" | "backward";
+
 export default function HomeCarousel({ slides }: HomeCarouselProps) {
   const carouselRef = useRef<CarouselRef>(null);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [slideDirection, setSlideDirection] =
+    useState<SlideDirection>("forward");
+
+  const handleBeforeChange = (current: number, next: number) => {
+    const lastSlide = slides.length - 1;
+    const isForward = next === current + 1 || (current === lastSlide && next === 0);
+
+    setSlideDirection(isForward ? "forward" : "backward");
+    setActiveSlide(next);
+  };
 
   return (
     <div className="home-carousel">
-      <Carousel ref={carouselRef} autoplay dots={{ className: "home-carousel-dots" }}>
-        {slides.map((slide) => (
+      <Carousel
+        ref={carouselRef}
+        autoplay
+        beforeChange={handleBeforeChange}
+        dots={{ className: "home-carousel-dots" }}
+      >
+        {slides.map((slide, index) => (
           <div key={slide.title}>
-            <div className="home-carousel-slide">
+            <div
+              className={`home-carousel-slide ${
+                activeSlide === index ? "home-carousel-slide-active" : ""
+              } home-carousel-slide-${slideDirection}`}
+            >
               <Image
                 src={slide.image}
                 alt={slide.title}

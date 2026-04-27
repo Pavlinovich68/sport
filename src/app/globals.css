@@ -41,7 +41,11 @@ a {
 .sport-page {
   min-height: 100vh;
   background:
-    radial-gradient(circle at top left, rgba(133, 193, 149, 0.18), transparent 28%),
+    radial-gradient(
+      circle at top left,
+      rgba(133, 193, 149, 0.18),
+      transparent 28%
+    ),
     linear-gradient(180deg, #f7faf7 0%, #eef3ef 40%, #e6ede7 100%);
 }
 
@@ -138,13 +142,15 @@ a {
 }
 
 .home-carousel-image {
+  opacity: 0;
   object-fit: cover;
   object-position: center;
-  transform: translate3d(-34px, 0, 0) scale(1.1);
+  transform: translate3d(-92px, 0, 0) scale(1.2);
   transition:
-    transform 900ms cubic-bezier(0.2, 0.72, 0.18, 1),
-    filter 900ms ease;
-  will-change: transform;
+    opacity 640ms ease,
+    transform 980ms cubic-bezier(0.2, 0.72, 0.18, 1),
+    filter 980ms ease;
+  will-change: opacity, transform;
 }
 
 .home-carousel-overlay {
@@ -157,8 +163,17 @@ a {
   justify-content: flex-end;
   color: white;
   background:
-    linear-gradient(90deg, rgba(5, 18, 13, 0.72) 0%, rgba(5, 18, 13, 0.42) 46%, rgba(5, 18, 13, 0.12) 100%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(9, 17, 14, 0.58) 100%);
+    linear-gradient(
+      90deg,
+      rgba(5, 18, 13, 0.72) 0%,
+      rgba(5, 18, 13, 0.42) 46%,
+      rgba(5, 18, 13, 0.12) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.02) 0%,
+      rgba(9, 17, 14, 0.58) 100%
+    );
 }
 
 .home-carousel-copy {
@@ -166,12 +181,20 @@ a {
   z-index: 3;
   max-width: 620px;
   padding: 0;
-  transform: translate3d(-24px, 18px, 0);
-  opacity: 0.2;
-  transition:
-    opacity 620ms ease,
-    transform 780ms cubic-bezier(0.2, 0.72, 0.18, 1);
+  transform: translate3d(min(86vw, 960px), 0, 0);
+  opacity: 0;
+  animation-duration: 680ms;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.2, 0.72, 0.18, 1);
   will-change: transform, opacity;
+}
+
+.home-carousel-slide-backward .home-carousel-copy {
+  transform: translate3d(calc(min(86vw, 960px) * -1), 0, 0);
+}
+
+.home-carousel-slide-forward .home-carousel-copy {
+  transform: translate3d(min(86vw, 960px), 0, 0);
 }
 
 .home-carousel-copy h3 {
@@ -198,14 +221,54 @@ a {
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.38);
 }
 
-.slick-active .home-carousel-image {
+.home-carousel-slide-active .home-carousel-image {
+  opacity: 1;
   filter: saturate(1.04) contrast(1.02);
-  transform: translate3d(18px, 0, 0) scale(1.1);
+  transform: translate3d(24px, 0, 0) scale(1.07);
 }
 
-.slick-active .home-carousel-copy {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
+.home-carousel-slide-active .home-carousel-copy {
+  animation-delay: 10ms;
+}
+
+.home-carousel-slide-active.home-carousel-slide-forward .home-carousel-copy {
+  animation-name: home-carousel-copy-from-right;
+}
+
+.home-carousel-slide-active.home-carousel-slide-backward .home-carousel-copy {
+  animation-name: home-carousel-copy-from-left;
+}
+
+@keyframes home-carousel-copy-from-right {
+  from {
+    opacity: 0;
+    transform: translate3d(min(86vw, 960px), 0, 0);
+  }
+
+  34% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes home-carousel-copy-from-left {
+  from {
+    opacity: 0;
+    transform: translate3d(calc(min(86vw, 960px) * -1), 0, 0);
+  }
+
+  34% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 .home-carousel-arrow {
