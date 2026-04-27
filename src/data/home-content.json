@@ -4,101 +4,121 @@
     "title": "Наши виды спорта",
     "slides": [
       {
+        "id": "football",
         "title": "Футбол",
         "description": "Командная игра, тренировки, турниры и городские матчи для разных возрастов.",
         "image": "/images/sports/football.png"
       },
       {
+        "id": "basketball",
         "title": "Баскетбол",
         "description": "Динамичные игры, точные передачи, броски и развитие командного взаимодействия.",
         "image": "/images/sports/basketball.png"
       },
       {
+        "id": "volleyball",
         "title": "Волейбол",
         "description": "Подачи, блоки и розыгрыши для школьных, любительских и городских команд.",
         "image": "/images/sports/volleyball.png"
       },
       {
+        "id": "hockey",
         "title": "Хоккей",
         "description": "Ледовые тренировки, скоростная техника и соревнования на городских аренах.",
         "image": "/images/sports/hockey.png"
       },
       {
+        "id": "swimming",
         "title": "Плавание",
         "description": "Техника, выносливость и регулярные занятия в бассейне для уверенного прогресса.",
         "image": "/images/sports/swimming.png"
       },
       {
+        "id": "athletics",
         "title": "Лёгкая атлетика",
         "description": "Беговые дисциплины, прыжки, стартовая техника и подготовка к соревнованиям.",
         "image": "/images/sports/athletics.png"
       },
       {
+        "id": "cross-country-skiing",
         "title": "Лыжные гонки",
         "description": "Зимняя выносливость, техника хода и тренировки на заснеженных трассах.",
         "image": "/images/sports/cross-country-skiing.png"
       },
       {
+        "id": "boxing",
         "title": "Бокс",
         "description": "Работа ног, защита, удары и дисциплина в безопасном тренировочном процессе.",
         "image": "/images/sports/boxing.png"
       },
       {
+        "id": "judo",
         "title": "Дзюдо",
         "description": "Броски, захваты, уважение к сопернику и развитие силы через технику.",
         "image": "/images/sports/judo.png"
       },
       {
+        "id": "gymnastics",
         "title": "Гимнастика",
         "description": "Гибкость, координация и выразительные упражнения на спортивном ковре.",
         "image": "/images/sports/gymnastics.png"
       },
       {
+        "id": "tennis",
         "title": "Теннис",
         "description": "Подачи, розыгрыши и работа на корте для начинающих и опытных игроков.",
         "image": "/images/sports/tennis.png"
       },
       {
+        "id": "table-tennis",
         "title": "Настольный теннис",
         "description": "Быстрая реакция, точность ударов и компактный формат соревновательной игры.",
         "image": "/images/sports/table-tennis.png"
       },
       {
+        "id": "figure-skating",
         "title": "Фигурное катание",
         "description": "Лёд, музыка, вращения и постановки, объединяющие спорт и выразительность.",
         "image": "/images/sports/figure-skating.png"
       },
       {
+        "id": "cycling",
         "title": "Велоспорт",
         "description": "Маршруты, скорость, техника поворотов и тренировки на открытом воздухе.",
         "image": "/images/sports/cycling.png"
       },
       {
+        "id": "biathlon",
         "title": "Биатлон",
         "description": "Лыжная дистанция, точная стрельба и выдержка на зимней трассе.",
         "image": "/images/sports/biathlon.png"
       },
       {
+        "id": "snowboarding",
         "title": "Сноуборд",
         "description": "Склоны, баланс, повороты и уверенное катание в зимнем парке.",
         "image": "/images/sports/snowboarding.png"
       },
       {
+        "id": "climbing",
         "title": "Скалолазание",
         "description": "Сила, маршрутное мышление и безопасное движение по вертикальной стене.",
         "image": "/images/sports/climbing.png"
       },
       {
+        "id": "chess",
         "title": "Шахматы",
         "description": "Интеллектуальный спорт, стратегия, турниры и развитие концентрации.",
         "image": "/images/sports/chess.png"
       },
       {
+        "id": "rugby",
         "title": "Регби",
         "description": "Командная борьба, скорость, силовая подготовка и честная игра.",
         "image": "/images/sports/rugby.png"
       },
       {
+        "id": "handball",
         "title": "Гандбол",
         "description": "Быстрые атаки, броски по воротам и плотная командная защита.",
         "image": "/images/sports/handball.png"

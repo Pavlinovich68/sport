@@ -295,6 +295,61 @@
   font-weight: 700;
 }
 
+.sportDetailSection {
+  min-height: calc(100svh - var(--header-height));
+  display: flex;
+  align-items: center;
+  padding: 72px 0;
+}
+
+.sportDetailHero {
+  position: relative;
+  min-height: min(680px, calc(100svh - 160px));
+  overflow: hidden;
+  border-radius: 28px;
+  isolation: isolate;
+  box-shadow: 0 28px 70px rgba(19, 42, 34, 0.16);
+}
+
+.sportDetailImage {
+  object-fit: cover;
+  object-position: center;
+}
+
+.sportDetailOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 18, 13, 0.76) 0%,
+      rgba(5, 18, 13, 0.44) 46%,
+      rgba(5, 18, 13, 0.08) 100%
+    ),
+    linear-gradient(180deg, rgba(5, 18, 13, 0.08), rgba(5, 18, 13, 0.52));
+}
+
+.sportDetailContent {
+  position: relative;
+  z-index: 2;
+  min-height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  max-width: 760px;
+  padding: 56px;
+  color: white;
+
+  h1 {
+    margin: 0;
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    line-height: 0.95;
+    font-weight: 900;
+    text-shadow: 0 4px 22px rgba(0, 0, 0, 0.42);
+  }
+}
+
 .footer {
   position: relative;
   z-index: 1;
@@ -348,6 +403,19 @@
 
   .heroContent {
     padding: 52px 0 44px;
+  }
+
+  .sportDetailSection {
+    padding: 34px 0 52px;
+  }
+
+  .sportDetailHero {
+    min-height: 520px;
+    border-radius: 20px;
+  }
+
+  .sportDetailContent {
+    padding: 30px;
   }
 
   .tiles {

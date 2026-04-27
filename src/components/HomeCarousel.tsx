@@ -5,6 +5,7 @@ import type { CarouselRef } from "antd/es/carousel";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import { Carousel } from "antd";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef, useState } from "react";
 
 type HomeCarouselProps = {
@@ -42,20 +43,26 @@ export default function HomeCarousel({ slides }: HomeCarouselProps) {
                 activeSlide === index ? "home-carousel-slide-active" : ""
               } home-carousel-slide-${slideDirection}`}
             >
-              <Image
-                src={slide.image}
-                alt={slide.title}
-                fill
-                sizes="(max-width: 760px) 100vw, 1440px"
-                className="home-carousel-image"
-              />
-              <div className="home-carousel-overlay">
-                <div className="home-carousel-copy">
-                  <p className="home-carousel-kicker">Наши виды спорта</p>
-                  <h3>{slide.title}</h3>
-                  <p>{slide.description}</p>
+              <Link
+                href={`/sports/${slide.id}`}
+                className="home-carousel-link"
+                aria-label={`Открыть страницу вида спорта: ${slide.title}`}
+              >
+                <Image
+                  src={slide.image}
+                  alt={slide.title}
+                  fill
+                  sizes="(max-width: 760px) 100vw, 1440px"
+                  className="home-carousel-image"
+                />
+                <div className="home-carousel-overlay">
+                  <div className="home-carousel-copy">
+                    <p className="home-carousel-kicker">Наши виды спорта</p>
+                    <h3>{slide.title}</h3>
+                    <p>{slide.description}</p>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         ))}
