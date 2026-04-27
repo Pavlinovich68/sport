@@ -1,6 +1,8 @@
 import Image from "next/image";
 import HomeCarousel from "@/components/HomeCarousel";
+import HomeTiles from "@/components/HomeTiles";
 import ParallaxScroll from "@/components/ParallaxScroll";
+import { getHomeContent } from "@/lib/homeContent";
 import styles from "./index.module.scss";
 
 const menuItems = [
@@ -11,16 +13,9 @@ const menuItems = [
   { label: "Контакты", href: "#contacts" },
 ];
 
-const tiles = [
-  "Платформа турниров",
-  "Каталог секций",
-  "Календарь стартов",
-  "Новости спорта",
-  "Достижения",
-  "Медиаархив",
-];
+export default async function Home() {
+  const homeContent = await getHomeContent();
 
-export default function Home() {
   return (
     <main className={styles.page}>
       <ParallaxScroll />
@@ -83,14 +78,15 @@ export default function Home() {
         className={`${styles.screen} ${styles.section} ${styles.eventsScreen}`}
         data-parallax-screen
       >
-        <div className={styles.parallaxAura} />
         <div className={styles.shell}>
           <div className={styles.sectionHeading}>
-            <p className={styles.sectionKicker}>Карусель</p>
-            <h2>Главные акценты платформы</h2>
+            <p className={styles.sectionKicker}>
+              {homeContent.carousel.kicker}
+            </p>
+            <h2>{homeContent.carousel.title}</h2>
           </div>
           <div className={styles.carouselFrame}>
-            <HomeCarousel />
+            <HomeCarousel slides={homeContent.carousel.slides} />
           </div>
         </div>
       </section>
@@ -100,22 +96,13 @@ export default function Home() {
         className={`${styles.screen} ${styles.section} ${styles.sectionSoft} ${styles.servicesScreen}`}
         data-parallax-screen
       >
-        <div className={styles.trackLines} />
         <div className={styles.shell}>
           <div className={styles.sectionHeading}>
-            <p className={styles.sectionKicker}>Разделы</p>
-            <h2>Плитки для будущих сервисов</h2>
+            <p className={styles.sectionKicker}>{homeContent.tiles.kicker}</p>
+            <h2>{homeContent.tiles.title}</h2>
           </div>
 
-          <div className={styles.tiles}>
-            {tiles.map((tile) => (
-              <article key={tile} className={styles.tile}>
-                <span className={styles.tileBadge}>Скоро</span>
-                <h3>{tile}</h3>
-                <p>Место зарезервировано под будущий функциональный модуль.</p>
-              </article>
-            ))}
-          </div>
+          <HomeTiles items={homeContent.tiles.items} />
         </div>
       </section>
 

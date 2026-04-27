@@ -212,35 +212,7 @@
 }
 
 .eventsScreen {
-  background:
-    linear-gradient(90deg, rgba(21, 38, 30, 0.06) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(21, 38, 30, 0.05) 1px, transparent 1px),
-    linear-gradient(180deg, #eef5f0 0%, #f8faf8 100%);
-  background-size: 72px 72px, 72px 72px, auto;
-}
-
-.parallaxAura {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background:
-    linear-gradient(
-      115deg,
-      transparent 0%,
-      transparent 40%,
-      rgba(31, 122, 83, 0.12) 40%,
-      rgba(31, 122, 83, 0.12) 54%,
-      transparent 54%,
-      transparent 100%
-    ),
-    repeating-linear-gradient(
-      115deg,
-      rgba(20, 77, 53, 0.08) 0 1px,
-      transparent 1px 48px
-  );
-  transform: translate3d(0, var(--parallax-mid), 0);
-  will-change: transform;
+  background: linear-gradient(180deg, #eef5f0 0%, #f8faf8 100%);
 }
 
 .servicesScreen {
@@ -248,24 +220,6 @@
     linear-gradient(180deg, rgba(255, 255, 255, 0.22), rgba(255, 255, 255, 0.78)),
     linear-gradient(135deg, rgba(31, 122, 83, 0.13), transparent 38%),
     #edf3ee;
-}
-
-.trackLines {
-  position: absolute;
-  inset: 8% -10%;
-  z-index: 1;
-  pointer-events: none;
-  border-top: 1px solid rgba(31, 122, 83, 0.18);
-  border-bottom: 1px solid rgba(31, 122, 83, 0.18);
-  background:
-    linear-gradient(90deg, transparent 0 24%, rgba(31, 122, 83, 0.12) 24% 25%, transparent 25% 100%),
-    repeating-linear-gradient(
-      0deg,
-      transparent 0 35px,
-      rgba(31, 122, 83, 0.11) 35px 36px
-  );
-  transform: translate3d(0, var(--parallax-reverse), 0) rotate(-2deg);
-  will-change: transform;
 }
 
 .sectionHeading {
@@ -410,8 +364,6 @@
   .heroImage,
   .heroDepth,
   .heroContent,
-  .parallaxAura,
-  .trackLines,
   .sectionHeading,
   .carouselFrame,
   .tiles {
