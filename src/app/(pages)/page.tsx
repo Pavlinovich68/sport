@@ -1,8 +1,15 @@
 import Image from "next/image";
 import HomeCarousel from "@/components/HomeCarousel";
+import ParallaxScroll from "@/components/ParallaxScroll";
 import styles from "./index.module.scss";
 
-const menuItems = ["Главная", "События", "Секции", "Спортсмены", "Контакты"];
+const menuItems = [
+  { label: "Главная", href: "#hero" },
+  { label: "События", href: "#events" },
+  { label: "Секции", href: "#services" },
+  { label: "Спортсмены", href: "#services" },
+  { label: "Контакты", href: "#contacts" },
+];
 
 const tiles = [
   "Платформа турниров",
@@ -16,6 +23,7 @@ const tiles = [
 export default function Home() {
   return (
     <main className={styles.page}>
+      <ParallaxScroll />
       <header className={styles.header}>
         <div className={styles.shell}>
           <div className={styles.headerInner}>
@@ -29,8 +37,8 @@ export default function Home() {
 
             <nav className={styles.nav} aria-label="Главное меню">
               {menuItems.map((item) => (
-                <a key={item} href="#" className={styles.navLink}>
-                  {item}
+                <a key={item.label} href={item.href} className={styles.navLink}>
+                  {item.label}
                 </a>
               ))}
             </nav>
@@ -38,7 +46,11 @@ export default function Home() {
         </div>
       </header>
 
-      <section className={styles.heroSection}>
+      <section
+        id="hero"
+        className={`${styles.screen} ${styles.heroSection}`}
+        data-parallax-screen
+      >
         <Image
           src="/images/sports-banner.png"
           alt="Спортсмены разных дисциплин на фоне гор и хвойного леса"
@@ -47,6 +59,7 @@ export default function Home() {
           sizes="100vw"
           className={styles.heroImage}
         />
+        <div className={styles.heroDepth} />
         <div className={styles.heroOverlay} />
         <div className={styles.shell}>
           <div className={styles.heroContent}>
@@ -65,7 +78,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={styles.section}>
+      <section
+        id="events"
+        className={`${styles.screen} ${styles.section} ${styles.eventsScreen}`}
+        data-parallax-screen
+      >
+        <div className={styles.parallaxAura} />
         <div className={styles.shell}>
           <div className={styles.sectionHeading}>
             <p className={styles.sectionKicker}>Карусель</p>
@@ -77,7 +95,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className={`${styles.section} ${styles.sectionSoft}`}>
+      <section
+        id="services"
+        className={`${styles.screen} ${styles.section} ${styles.sectionSoft} ${styles.servicesScreen}`}
+        data-parallax-screen
+      >
+        <div className={styles.trackLines} />
         <div className={styles.shell}>
           <div className={styles.sectionHeading}>
             <p className={styles.sectionKicker}>Разделы</p>
@@ -96,7 +119,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className={styles.footer}>
+      <footer id="contacts" className={styles.footer}>
         <div className={styles.shell}>
           <div className={styles.footerInner}>
             <div>
