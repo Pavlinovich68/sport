@@ -40,17 +40,12 @@
   gap: 14px;
 }
 
-.brandMark {
-  width: 44px;
-  height: 44px;
+.brandLogo {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
   border-radius: 14px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #1f7a53, #144d35);
-  color: white;
-  font-weight: 800;
-  box-shadow: 0 12px 24px rgba(31, 122, 83, 0.24);
+  box-shadow: 0 12px 24px rgba(18, 60, 43, 0.2);
 }
 
 .brandTitle {

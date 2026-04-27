@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Sport",
   description: "Спортивная платформа с событиями, секциями и медиа",
+  icons: {
+    icon: "/sport-logo.svg",
+    shortcut: "/sport-logo.svg",
+  },
 };
 
 export default function RootLayout({

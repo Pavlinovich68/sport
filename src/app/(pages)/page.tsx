@@ -23,7 +23,14 @@ export default async function Home() {
         <div className={styles.shell}>
           <div className={styles.headerInner}>
             <div className={styles.brand}>
-              <span className={styles.brandMark}>S</span>
+              <Image
+                src="/sport-logo.svg"
+                alt="Sport"
+                width={48}
+                height={48}
+                priority
+                className={styles.brandLogo}
+              />
               <div>
                 <p className={styles.brandTitle}>Sport</p>
                 <p className={styles.brandSubtitle}>Спортивная платформа</p>
