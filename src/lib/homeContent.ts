@@ -3,7 +3,7 @@ import homeContent from "@/data/home-content.json";
 export type HomeCarouselSlide = {
   title: string;
   description: string;
-  accent: string;
+  image: string;
 };
 
 export type HomeTile = {

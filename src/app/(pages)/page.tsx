@@ -1,6 +1,6 @@
 import Image from "next/image";
 import HomeCarousel from "@/components/HomeCarousel";
-import HomeTiles from "@/components/HomeTiles";
+import HomeTile from "@/components/HomeTile";
 import ParallaxScroll from "@/components/ParallaxScroll";
 import { getHomeContent } from "@/lib/homeContent";
 import styles from "./index.module.scss";
@@ -109,7 +109,11 @@ export default async function Home() {
             <h2>{homeContent.tiles.title}</h2>
           </div>
 
-          <HomeTiles items={homeContent.tiles.items} />
+          <div className={styles.tiles}>
+            {homeContent.tiles.items.map((item) => (
+              <HomeTile key={item.title} item={item} />
+            ))}
+          </div>
         </div>
       </section>
 

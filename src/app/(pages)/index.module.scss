@@ -208,6 +208,10 @@
 
 .eventsScreen {
   background: linear-gradient(180deg, #eef5f0 0%, #f8faf8 100%);
+
+  > .shell {
+    width: min(1120px, calc(100% - 40px));
+  }
 }
 
 .servicesScreen {
@@ -234,7 +238,7 @@
 }
 
 .carouselFrame {
-  overflow: hidden;
+  overflow: visible;
   border-radius: 28px;
   box-shadow: 0 24px 60px rgba(19, 42, 34, 0.12);
   transform: translate3d(0, var(--parallax-reverse), 0);

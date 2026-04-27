@@ -122,29 +122,63 @@ a {
   transform: translateY(-1px);
 }
 
+.home-carousel {
+  --home-carousel-height: clamp(360px, 36vw, 520px);
+  position: relative;
+}
+
 .home-carousel-slide {
-  min-height: 360px;
+  height: var(--home-carousel-height);
   border-radius: 28px;
   overflow: hidden;
   position: relative;
+  isolation: isolate;
+  background: #123c2b;
   box-shadow: 0 24px 60px rgba(19, 42, 34, 0.14);
 }
 
+.home-carousel-image {
+  object-fit: cover;
+  object-position: center;
+  transform: translate3d(-34px, 0, 0) scale(1.1);
+  transition:
+    transform 900ms cubic-bezier(0.2, 0.72, 0.18, 1),
+    filter 900ms ease;
+  will-change: transform;
+}
+
 .home-carousel-overlay {
-  min-height: 360px;
+  position: relative;
+  z-index: 2;
+  min-height: 100%;
   padding: 38px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   color: white;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(9, 17, 14, 0.46) 100%);
+    linear-gradient(90deg, rgba(5, 18, 13, 0.72) 0%, rgba(5, 18, 13, 0.42) 46%, rgba(5, 18, 13, 0.12) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, rgba(9, 17, 14, 0.58) 100%);
 }
 
-.home-carousel-overlay h3 {
+.home-carousel-copy {
+  position: relative;
+  z-index: 3;
+  max-width: 620px;
+  padding: 0;
+  transform: translate3d(-24px, 18px, 0);
+  opacity: 0.2;
+  transition:
+    opacity 620ms ease,
+    transform 780ms cubic-bezier(0.2, 0.72, 0.18, 1);
+  will-change: transform, opacity;
+}
+
+.home-carousel-copy h3 {
   margin: 0;
-  font-size: clamp(1.6rem, 2.4vw, 2.5rem);
+  font-size: clamp(2rem, 3.4vw, 4.2rem);
   line-height: 1.05;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.42);
 }
 
 .home-carousel-kicker {
@@ -155,12 +189,69 @@ a {
   font-weight: 700;
 }
 
-.home-carousel-overlay p:last-child {
+.home-carousel-copy p:last-child {
   margin: 16px 0 0;
   max-width: 540px;
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.3vw, 1.18rem);
   line-height: 1.7;
-  color: rgba(255, 255, 255, 0.88);
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.38);
+}
+
+.slick-active .home-carousel-image {
+  filter: saturate(1.04) contrast(1.02);
+  transform: translate3d(18px, 0, 0) scale(1.1);
+}
+
+.slick-active .home-carousel-copy {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.home-carousel-arrow {
+  position: absolute;
+  top: calc(var(--home-carousel-height) / 2);
+  z-index: 5;
+  width: 74px;
+  height: 74px;
+  border: 2px solid rgba(255, 255, 255, 0.32);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5, 18, 13, 0.6);
+  color: white;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  opacity: 0;
+  transform: translate3d(0, -50%, 0) scale(0.92);
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease;
+}
+
+.home-carousel-arrow:hover,
+.home-carousel-arrow:focus-visible {
+  background: rgba(18, 60, 43, 0.82);
+  border-color: rgba(255, 255, 255, 0.48);
+  outline: none;
+}
+
+.home-carousel:hover .home-carousel-arrow,
+.home-carousel:focus-within .home-carousel-arrow {
+  opacity: 1;
+  transform: translate3d(0, -50%, 0) scale(1);
+}
+
+.home-carousel-arrow-prev {
+  left: -37px;
+}
+
+.home-carousel-arrow-next {
+  right: -37px;
 }
 
 .home-carousel-dots li button {
@@ -168,8 +259,38 @@ a {
 }
 
 @media (max-width: 760px) {
-  .home-carousel-slide,
+  .home-carousel {
+    --home-carousel-height: 380px;
+  }
+
   .home-carousel-overlay {
-    min-height: 300px;
+    padding: 22px;
+  }
+
+  .home-carousel-copy {
+    max-width: min(100%, 560px);
+  }
+
+  .home-carousel-arrow {
+    width: 56px;
+    height: 56px;
+    opacity: 1;
+    transform: translate3d(0, -50%, 0) scale(1);
+  }
+
+  .home-carousel-arrow-prev {
+    left: -18px;
+  }
+
+  .home-carousel-arrow-next {
+    right: -18px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home-carousel-image,
+  .home-carousel-copy {
+    transform: none;
+    transition: none;
   }
 }
