@@ -27,22 +27,49 @@ export default async function SportPage({ params }: SportPageProps) {
 
   return (
     <section className={styles.sportDetailSection}>
-      <div className={styles.shell}>
-        <article className={styles.sportDetailHero}>
-          <Image
-            src={sport.image}
-            alt={sport.title}
-            fill
-            priority
-            sizes="(max-width: 760px) 100vw, 1240px"
-            className={styles.sportDetailImage}
-          />
-          <div className={styles.sportDetailOverlay} />
+      <article className={styles.sportDetailHero}>
+        <Image
+          src={sport.image}
+          alt={sport.title}
+          fill
+          priority
+          sizes="100vw"
+          className={styles.sportDetailImage}
+        />
+        <div className={styles.sportDetailOverlay} />
+        <div className={styles.shell}>
           <div className={styles.sportDetailContent}>
-            <p className={styles.sectionKicker}>Вид спорта</p>
             <h1>{sport.title}</h1>
           </div>
-        </article>
+        </div>
+      </article>
+
+      <div className={styles.shell}>
+        <div className={styles.sportDetailBody}>
+          <aside className={styles.sportDetailSidebar}>
+            <div className={styles.sportDetailPanel}>
+              <p className={styles.sectionKicker}>Ключевые направления</p>
+              <div className={styles.sportDetailTags}>
+                {sport.tags.map((tag) => (
+                  <span key={tag} className={styles.sportDetailTag}>
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </aside>
+
+          <div className={styles.sportDetailMain}>
+            <div className={styles.sportDetailPanel}>
+              <p className={styles.sectionKicker}>Описание</p>
+              <div className={styles.sportDetailDescription}>
+                {sport.fullDescription.split("\n\n").map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

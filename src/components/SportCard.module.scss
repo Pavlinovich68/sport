@@ -1,0 +1,136 @@
+.card {
+  width: min(100%, 340px);
+  min-height: 455px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 28px;
+  border: 1px solid rgba(24, 49, 39, 0.12);
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 22px 54px rgba(19, 42, 34, 0.1);
+  backdrop-filter: blur(14px);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 28px 64px rgba(19, 42, 34, 0.16);
+    border-color: rgba(31, 122, 83, 0.24);
+  }
+}
+
+.media {
+  position: relative;
+  min-height: 230px;
+  flex: 0 0 230px;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 260ms ease;
+
+  .card:hover & {
+    transform: scale(1.04);
+  }
+}
+
+.mediaShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(7, 23, 18, 0.08) 0%,
+    rgba(7, 23, 18, 0.28) 55%,
+    rgba(7, 23, 18, 0.68) 100%
+  );
+  opacity: 0;
+  transition: opacity 240ms ease;
+
+  .card:hover & {
+    opacity: 1;
+  }
+}
+
+.tagsPanel {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 16px;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(120%);
+  transition:
+    opacity 240ms ease,
+    transform 240ms ease;
+
+  .card:hover & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  color: white;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.2;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.16);
+}
+
+.body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 22px;
+}
+
+.title {
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+  line-height: 1.05;
+  color: #163629;
+}
+
+.description {
+  margin: 0;
+  color: #567366;
+  line-height: 1.7;
+}
+
+.link {
+  margin-top: auto;
+  padding-top: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #1f7a53;
+  font-weight: 800;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+
+  &::after {
+    content: "→";
+    font-size: 1rem;
+  }
+
+  &:hover {
+    color: #144d35;
+    transform: translateX(2px);
+  }
+}

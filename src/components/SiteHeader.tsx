@@ -4,8 +4,8 @@ import styles from "@/app/(pages)/index.module.scss";
 const menuItems = [
   { label: "Главная", href: "/#hero" },
   { label: "События", href: "/#events" },
+  { label: "Все виды спорта", href: "/sports" },
   { label: "Секции", href: "/#services" },
-  { label: "Спортсмены", href: "/#services" },
   { label: "Контакты", href: "/#contacts" },
 ];
 
@@ -16,7 +16,7 @@ export default function SiteHeader() {
         <div className={styles.headerInner}>
           <div className={styles.brand}>
             <Image
-              src="/sport-logo.svg"
+              src="/sport-logo.png"
               alt="Sport"
               width={48}
               height={48}
@@ -24,8 +24,10 @@ export default function SiteHeader() {
               className={styles.brandLogo}
             />
             <div>
-              <p className={styles.brandTitle}>Sport</p>
-              <p className={styles.brandSubtitle}>Спортивная платформа</p>
+              <p className={styles.brandTitle}>Спорт 74</p>
+              <p className={styles.brandSubtitle}>
+                Спортивный портал Челябинской области
+              </p>
             </div>
           </div>
 

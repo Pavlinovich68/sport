@@ -11,3 +11,51 @@ generator client {
 datasource db {
   provider = "postgresql"
 }
+
+model Sport {
+  id              String     @id
+  title           String
+  description     String     @db.Text
+  summary         String     @db.Text
+  fullDescription String     @db.Text
+  image           String
+  sortOrder       Int        @unique
+  tags            SportTag[]
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+}
+
+model Tag {
+  id        String     @id @default(cuid())
+  name      String     @unique
+  sports    SportTag[]
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+}
+
+model SportTag {
+  sportId    String
+  tagId      String
+  sortOrder  Int
+  sport      Sport    @relation(fields: [sportId], references: [id], onDelete: Cascade)
+  tag        Tag      @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([sportId, tagId])
+}
+
+model HomeSection {
+  key       String   @id
+  kicker    String
+  title     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model HomeTile {
+  sortOrder   Int      @id
+  title       String
+  badge       String
+  description String   @db.Text
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}

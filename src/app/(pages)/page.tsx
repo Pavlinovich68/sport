@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import HomeCarousel from "@/components/HomeCarousel";
 import HomeTile from "@/components/HomeTile";
 import { getHomeContent } from "@/lib/homeContent";
@@ -47,11 +48,16 @@ export default async function Home() {
         data-parallax-screen
       >
         <div className={styles.shell}>
-          <div className={styles.sectionHeading}>
-            <p className={styles.sectionKicker}>
-              {homeContent.carousel.kicker}
-            </p>
-            <h2>{homeContent.carousel.title}</h2>
+          <div className={styles.sectionHeadingRow}>
+            <div className={styles.sectionHeading}>
+              <p className={styles.sectionKicker}>
+                {homeContent.carousel.kicker}
+              </p>
+              <h2>{homeContent.carousel.title}</h2>
+            </div>
+            <Link href="/sports" className={styles.catalogButton}>
+              Все виды спорта
+            </Link>
           </div>
           <div className={styles.carouselFrame}>
             <HomeCarousel slides={homeContent.carousel.slides} />
@@ -77,7 +83,6 @@ export default async function Home() {
           </div>
         </div>
       </section>
-
     </>
   );
 }

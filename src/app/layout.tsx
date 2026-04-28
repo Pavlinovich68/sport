@@ -18,8 +18,9 @@ export const metadata: Metadata = {
   title: "Sport",
   description: "Спортивная платформа с событиями, секциями и медиа",
   icons: {
-    icon: "/sport-logo.svg",
-    shortcut: "/sport-logo.svg",
+    icon: "/sport-logo.png",
+    shortcut: "/sport-logo.png",
+    apple: "/sport-logo.png",
   },
 };
 
