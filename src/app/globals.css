@@ -129,10 +129,37 @@ a {
 .home-carousel {
   --home-carousel-height: clamp(360px, 36vw, 520px);
   position: relative;
+  min-height: var(--home-carousel-height);
+}
+
+.home-carousel .slick-slider,
+.home-carousel .slick-list,
+.home-carousel .slick-track,
+.home-carousel .slick-slide,
+.home-carousel .slick-slide > div {
+  height: 100%;
+}
+
+.home-carousel .slick-list {
+  overflow: hidden;
+  border-radius: 28px;
+}
+
+.home-carousel .slick-track {
+  display: flex !important;
+}
+
+.home-carousel .slick-slide {
+  height: var(--home-carousel-height);
+}
+
+.home-carousel .slick-slide > div {
+  display: flex;
 }
 
 .home-carousel-slide {
   height: var(--home-carousel-height);
+  width: 100%;
   border-radius: 28px;
   overflow: hidden;
   position: relative;
@@ -194,6 +221,11 @@ a {
   animation-fill-mode: both;
   animation-timing-function: cubic-bezier(0.2, 0.72, 0.18, 1);
   will-change: transform, opacity;
+}
+
+.home-carousel-slide-active .home-carousel-copy,
+.home-carousel-slide:first-child .home-carousel-copy {
+  opacity: 1;
 }
 
 .home-carousel-slide-backward .home-carousel-copy {
@@ -326,6 +358,20 @@ a {
 
 .home-carousel-dots li button {
   background: rgba(255, 255, 255, 0.7) !important;
+}
+
+.home-carousel-dots {
+  bottom: 18px !important;
+}
+
+.home-carousel-dots li {
+  margin-inline: 5px !important;
+}
+
+.home-carousel-dots li button {
+  width: 12px !important;
+  height: 12px !important;
+  border-radius: 999px !important;
 }
 
 @media (max-width: 760px) {
