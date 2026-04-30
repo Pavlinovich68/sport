@@ -447,6 +447,17 @@
   }
 }
 
+.sportObjectsSection {
+  padding: 0 0 72px;
+}
+
+.sportObjectsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  justify-items: center;
+}
+
 .catalogSection {
   min-height: calc(100svh - var(--header-height));
   display: flex;
@@ -576,6 +587,11 @@
 
   .sportsGrid {
     grid-template-columns: minmax(0, 340px);
+  }
+
+  .sportObjectsGrid {
+    grid-template-columns: 1fr;
+    gap: 22px;
   }
 
   .tiles {

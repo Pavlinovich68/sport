@@ -1,0 +1,1206 @@
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://D:/VS Code/sport/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://D:/VS Code/sport/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+[browser] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior (file://D:/VS Code/sport/.next/dev/static/chunks/node_modules_next_dist_115brz8._.js:2431:13)
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/page.tsx:5:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m3 |[0m [36mimport[0m [33mHomeCarousel[0m [36mfrom[0m [32m"@/components/HomeCarousel"[0m;
+  [90m4 |[0m [36mimport[0m [33mHomeTile[0m [36mfrom[0m [32m"@/components/HomeTile"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { getHomeContent } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m styles [36mfrom[0m [32m"./index.module.scss"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mHome[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/page.tsx:5:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m3 |[0m [36mimport[0m [33mHomeCarousel[0m [36mfrom[0m [32m"@/components/HomeCarousel"[0m;
+  [90m4 |[0m [36mimport[0m [33mHomeTile[0m [36mfrom[0m [32m"@/components/HomeTile"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { getHomeContent } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m styles [36mfrom[0m [32m"./index.module.scss"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mHome[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/page.tsx:5:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m3 |[0m [36mimport[0m [33mHomeCarousel[0m [36mfrom[0m [32m"@/components/HomeCarousel"[0m;
+  [90m4 |[0m [36mimport[0m [33mHomeTile[0m [36mfrom[0m [32m"@/components/HomeTile"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { getHomeContent } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m styles [36mfrom[0m [32m"./index.module.scss"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mHome[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/page.tsx:5:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m3 |[0m [36mimport[0m [33mHomeCarousel[0m [36mfrom[0m [32m"@/components/HomeCarousel"[0m;
+  [90m4 |[0m [36mimport[0m [33mHomeTile[0m [36mfrom[0m [32m"@/components/HomeTile"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { getHomeContent } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m styles [36mfrom[0m [32m"./index.module.scss"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mHome[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/page.tsx:5:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m3 |[0m [36mimport[0m [33mHomeCarousel[0m [36mfrom[0m [32m"@/components/HomeCarousel"[0m;
+  [90m4 |[0m [36mimport[0m [33mHomeTile[0m [36mfrom[0m [32m"@/components/HomeTile"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { getHomeContent } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m styles [36mfrom[0m [32m"./index.module.scss"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mHome[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/page.tsx:5:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m3 |[0m [36mimport[0m [33mHomeCarousel[0m [36mfrom[0m [32m"@/components/HomeCarousel"[0m;
+  [90m4 |[0m [36mimport[0m [33mHomeTile[0m [36mfrom[0m [32m"@/components/HomeTile"[0m;
+[31m[1m>[0m [90m5 |[0m [36mimport[0m { getHomeContent } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m6 |[0m [36mimport[0m styles [36mfrom[0m [32m"./index.module.scss"[0m;
+  [90m7 |[0m
+  [90m8 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mHome[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m { notFound } [36mfrom[0m [32m"next/navigation"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSportById, getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mtype[0m [33mSportPageProps[0m = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] Uncaught Error: ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  1 | import Image from "next/image";
+  2 | import { notFound } from "next/navigation";
+> 3 | import { getSportById, getSports } from "@/lib/homeContent";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import styles from "../../index.module.scss";
+  5 |
+  6 | type SportPageProps = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/app/(pages)/sports/[sportId]/page.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./src/app/(pages)/sports/[sportId]/page.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+⨯ ./src/app/(pages)/sports/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  [90m1 |[0m [36mimport[0m [33mImage[0m [36mfrom[0m [32m"next/image"[0m;
+  [90m2 |[0m [36mimport[0m [33mSportsCatalogClient[0m [36mfrom[0m [32m"@/components/SportsCatalogClient"[0m;
+[31m[1m>[0m [90m3 |[0m [36mimport[0m { getSports } [36mfrom[0m [32m"@/lib/homeContent"[0m;
+  [90m  |[0m [31m[1m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [90m4 |[0m [36mimport[0m styles [36mfrom[0m [32m"../index.module.scss"[0m;
+  [90m5 |[0m
+  [90m6 |[0m [36mexport[0m [36mdefault[0m [36masync[0m [36mfunction[0m [33mSportsCatalogPage[0m() {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[browser] Uncaught Error: ./src/app/(pages)/sports/[sportId]/page.tsx:3:1
+Module not found: Can't resolve '@/lib/homeContent'
+  1 | import Image from "next/image";
+  2 | import { notFound } from "next/navigation";
+> 3 | import { getSportById, getSports } from "@/lib/homeContent";
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import styles from "../../index.module.scss";
+  5 |
+  6 | type SportPageProps = {
+
+Import map: aliased to relative './src/lib/homeContent' inside of [project]/
+
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+    at <unknown> (Error: ./src/app/(pages)/sports/[sportId]/page.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+    at <unknown> (Error: (./src/app/(pages)/sports/[sportId]/page.tsx:3:1)
+    at <unknown> (https://nextjs.org/docs/messages/module-not-found)
+⨯ Error [ChunkLoadError]: Failed to load chunk server/chunks/ssr/node_modules_0sl9~85._.js from runtime for chunk server/app/(pages)/sports/[sportId]/page.js
+    at Object.<anonymous> (D:\VS Code\sport\.next\dev\server\app\(pages)\sports\[sportId]\page.js:14:3) {
+  page: '/sports/football',
+  [cause]: Error: Cannot find module 'D:\VS Code\sport\.next\dev\server\chunks\ssr\node_modules_0sl9~85._.js'
+  Require stack:
+  - D:\VS Code\sport\.next\dev\server\chunks\ssr\[turbopack]_runtime.js
+  - D:\VS Code\sport\.next\dev\server\app\(pages)\sports\[sportId]\page.js
+  - D:\VS Code\sport\node_modules\next\dist\server\require.js
+  - D:\VS Code\sport\node_modules\next\dist\server\load-components.js
+  - D:\VS Code\sport\node_modules\next\dist\build\utils.js
+  - D:\VS Code\sport\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+  - D:\VS Code\sport\node_modules\next\dist\server\lib\router-server.js
+  - D:\VS Code\sport\node_modules\next\dist\server\lib\start-server.js
+      at Object.<anonymous> (D:\VS Code\sport\.next\dev\server\app\(pages)\sports\[sportId]\page.js:14:3) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      'D:\\VS Code\\sport\\.next\\dev\\server\\chunks\\ssr\\[turbopack]_runtime.js',
+      'D:\\VS Code\\sport\\.next\\dev\\server\\app\\(pages)\\sports\\[sportId]\\page.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\require.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\load-components.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\build\\utils.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+    ]
+  }
+}
+[browser] Uncaught ChunkLoadError: Failed to load chunk server/chunks/ssr/node_modules_0sl9~85._.js from runtime for chunk server/app/(pages)/sports/[sportId]/page.js
+    at Object.<anonymous> (.next\dev\server\app\(pages)\sports\[sportId]\page.js:14:3)
+⨯ Error [ChunkLoadError]: Failed to load chunk server/chunks/ssr/node_modules_0sl9~85._.js from runtime for chunk server/app/(pages)/sports/[sportId]/page.js
+    at Object.<anonymous> (D:\VS Code\sport\.next\dev\server\app\(pages)\sports\[sportId]\page.js:14:3) {
+  page: '/sports/football',
+  [cause]: Error: Cannot find module 'D:\VS Code\sport\.next\dev\server\chunks\ssr\node_modules_0sl9~85._.js'
+  Require stack:
+  - D:\VS Code\sport\.next\dev\server\chunks\ssr\[turbopack]_runtime.js
+  - D:\VS Code\sport\.next\dev\server\app\(pages)\sports\[sportId]\page.js
+  - D:\VS Code\sport\node_modules\next\dist\server\require.js
+  - D:\VS Code\sport\node_modules\next\dist\server\load-components.js
+  - D:\VS Code\sport\node_modules\next\dist\build\utils.js
+  - D:\VS Code\sport\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+  - D:\VS Code\sport\node_modules\next\dist\server\lib\router-server.js
+  - D:\VS Code\sport\node_modules\next\dist\server\lib\start-server.js
+      at Object.<anonymous> (D:\VS Code\sport\.next\dev\server\app\(pages)\sports\[sportId]\page.js:14:3) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      'D:\\VS Code\\sport\\.next\\dev\\server\\chunks\\ssr\\[turbopack]_runtime.js',
+      'D:\\VS Code\\sport\\.next\\dev\\server\\app\\(pages)\\sports\\[sportId]\\page.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\require.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\load-components.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\build\\utils.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+    ]
+  }
+}
+[browser] Uncaught ChunkLoadError: Failed to load chunk server/chunks/ssr/node_modules_0sl9~85._.js from runtime for chunk server/app/(pages)/sports/[sportId]/page.js
+    at Object.<anonymous> (.next\dev\server\app\(pages)\sports\[sportId]\page.js:14:3)
+⨯ Error [ChunkLoadError]: Failed to load chunk server/chunks/ssr/node_modules_0sl9~85._.js from runtime for chunk server/app/(pages)/sports/[sportId]/page.js
+    at Object.<anonymous> (D:\VS Code\sport\.next\dev\server\app\(pages)\sports\[sportId]\page.js:14:3) {
+  page: '/sports/football',
+  [cause]: Error: Cannot find module 'D:\VS Code\sport\.next\dev\server\chunks\ssr\node_modules_0sl9~85._.js'
+  Require stack:
+  - D:\VS Code\sport\.next\dev\server\chunks\ssr\[turbopack]_runtime.js
+  - D:\VS Code\sport\.next\dev\server\app\(pages)\sports\[sportId]\page.js
+  - D:\VS Code\sport\node_modules\next\dist\server\require.js
+  - D:\VS Code\sport\node_modules\next\dist\server\load-components.js
+  - D:\VS Code\sport\node_modules\next\dist\build\utils.js
+  - D:\VS Code\sport\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+  - D:\VS Code\sport\node_modules\next\dist\server\lib\router-server.js
+  - D:\VS Code\sport\node_modules\next\dist\server\lib\start-server.js
+      at Object.<anonymous> (D:\VS Code\sport\.next\dev\server\app\(pages)\sports\[sportId]\page.js:14:3) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      'D:\\VS Code\\sport\\.next\\dev\\server\\chunks\\ssr\\[turbopack]_runtime.js',
+      'D:\\VS Code\\sport\\.next\\dev\\server\\app\\(pages)\\sports\\[sportId]\\page.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\require.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\load-components.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\build\\utils.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+    ]
+  }
+}
+⨯ Error [ChunkLoadError]: Failed to load chunk server/chunks/ssr/node_modules_0sl9~85._.js from runtime for chunk server/app/(pages)/sports/[sportId]/page.js
+    at Object.<anonymous> (D:\VS Code\sport\.next\dev\server\app\(pages)\sports\[sportId]\page.js:14:3) {
+  page: '/sports/football',
+  [cause]: Error: Cannot find module 'D:\VS Code\sport\.next\dev\server\chunks\ssr\node_modules_0sl9~85._.js'
+  Require stack:
+  - D:\VS Code\sport\.next\dev\server\chunks\ssr\[turbopack]_runtime.js
+  - D:\VS Code\sport\.next\dev\server\app\(pages)\sports\[sportId]\page.js
+  - D:\VS Code\sport\node_modules\next\dist\server\require.js
+  - D:\VS Code\sport\node_modules\next\dist\server\load-components.js
+  - D:\VS Code\sport\node_modules\next\dist\build\utils.js
+  - D:\VS Code\sport\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+  - D:\VS Code\sport\node_modules\next\dist\server\lib\router-server.js
+  - D:\VS Code\sport\node_modules\next\dist\server\lib\start-server.js
+      at Object.<anonymous> (D:\VS Code\sport\.next\dev\server\app\(pages)\sports\[sportId]\page.js:14:3) {
+    code: 'MODULE_NOT_FOUND',
+    requireStack: [
+      'D:\\VS Code\\sport\\.next\\dev\\server\\chunks\\ssr\\[turbopack]_runtime.js',
+      'D:\\VS Code\\sport\\.next\\dev\\server\\app\\(pages)\\sports\\[sportId]\\page.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\require.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\load-components.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\build\\utils.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\lib\\router-utils\\setup-dev-bundler.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\lib\\router-server.js',
+      'D:\\VS Code\\sport\\node_modules\\next\\dist\\server\\lib\\start-server.js'
+    ]
+  }
+}
+[browser] Uncaught ChunkLoadError: Failed to load chunk server/chunks/ssr/node_modules_0sl9~85._.js from runtime for chunk server/app/(pages)/sports/[sportId]/page.js
+    at Object.<anonymous> (.next\dev\server\app\(pages)\sports\[sportId]\page.js:14:3)
+Persisting failed: Unable to write SST file 00000389.sst
+
+Caused by:
+    Системе не удается найти указанный путь. (os error 3)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Persisting failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)
+Compaction failed: Another write batch or compaction is already active (Only a single write operations is allowed at a time)

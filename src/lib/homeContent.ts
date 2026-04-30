@@ -11,6 +11,28 @@ export type HomeCarouselSlide = {
   image: string;
 };
 
+export type PaidServiceContent = {
+  name: string;
+  description: string;
+  price: string;
+};
+
+export type SportObjectContent = {
+  id: string;
+  name: string;
+  slug: string;
+  image: string;
+  address: string;
+  description: string;
+  workingHours: string;
+  features: string;
+  paidServices: PaidServiceContent[];
+};
+
+export type SportContent = HomeCarouselSlide & {
+  sportObjects: SportObjectContent[];
+};
+
 export type HomeTile = {
   title: string;
   badge: string;
@@ -34,6 +56,21 @@ function getHomeContentSync(): HomeContent {
   return homeContent;
 }
 
+function getFallbackSport(sportId: string): SportContent | null {
+  const fallback = getHomeContentSync().carousel.slides.find(
+    (item) => item.id === sportId,
+  );
+
+  return fallback ? { ...fallback, sportObjects: [] } : null;
+}
+
+function getFallbackSports(): SportContent[] {
+  return getHomeContentSync().carousel.slides.map((sport) => ({
+    ...sport,
+    sportObjects: [],
+  }));
+}
+
 function mapSportRecord(sport: {
   id: string;
   title: string;
@@ -47,7 +84,28 @@ function mapSportRecord(sport: {
       name: string;
     };
   }>;
-}): HomeCarouselSlide {
+  sportObjects: Array<{
+    sortOrder: number;
+    sportObject: {
+      id: string;
+      name: string;
+      slug: string;
+      image: string;
+      address: string;
+      description: string;
+      workingHours: string;
+      features: string;
+      paidServices: Array<{
+        sortOrder: number;
+        name: string;
+        description: string;
+        price: {
+          toString(): string;
+        };
+      }>;
+    };
+  }>;
+}): SportContent {
   return {
     id: sport.id,
     title: sport.title,
@@ -58,70 +116,92 @@ function mapSportRecord(sport: {
     tags: sport.tags
       .sort((left, right) => left.sortOrder - right.sortOrder)
       .map((item) => item.tag.name),
+    sportObjects: sport.sportObjects
+      .sort((left, right) => left.sortOrder - right.sortOrder)
+      .map((item) => ({
+        id: item.sportObject.id,
+        name: item.sportObject.name,
+        slug: item.sportObject.slug,
+        image: item.sportObject.image,
+        address: item.sportObject.address,
+        description: item.sportObject.description,
+        workingHours: item.sportObject.workingHours,
+        features: item.sportObject.features,
+        paidServices: item.sportObject.paidServices
+          .sort((left, right) => left.sortOrder - right.sortOrder)
+          .map((service) => ({
+            name: service.name,
+            description: service.description,
+            price: service.price.toString(),
+          })),
+      })),
   };
 }
 
-export async function getSports(): Promise<HomeCarouselSlide[]> {
+const sportInclude = {
+  tags: {
+    orderBy: {
+      sortOrder: "asc" as const,
+    },
+    include: {
+      tag: true,
+    },
+  },
+  sportObjects: {
+    orderBy: {
+      sortOrder: "asc" as const,
+    },
+    include: {
+      sportObject: {
+        include: {
+          paidServices: {
+            orderBy: {
+              sortOrder: "asc" as const,
+            },
+          },
+        },
+      },
+    },
+  },
+};
+
+export async function getSports(): Promise<SportContent[]> {
   try {
     const sports = await prisma.sport.findMany({
       orderBy: {
         sortOrder: "asc",
       },
-      include: {
-        tags: {
-          orderBy: {
-            sortOrder: "asc",
-          },
-          include: {
-            tag: true,
-          },
-        },
-      },
+      include: sportInclude,
     });
 
     if (sports.length === 0) {
-      return getHomeContentSync().carousel.slides;
+      return getFallbackSports();
     }
 
     return sports.map(mapSportRecord);
   } catch {
-    return getHomeContentSync().carousel.slides;
+    return getFallbackSports();
   }
 }
 
 export async function getSportById(
   sportId: string,
-): Promise<HomeCarouselSlide | null> {
+): Promise<SportContent | null> {
   try {
     const sport = await prisma.sport.findUnique({
       where: {
         id: sportId,
       },
-      include: {
-        tags: {
-          orderBy: {
-            sortOrder: "asc",
-          },
-          include: {
-            tag: true,
-          },
-        },
-      },
+      include: sportInclude,
     });
 
     if (!sport) {
-      return (
-        getHomeContentSync().carousel.slides.find((item) => item.id === sportId) ??
-        null
-      );
+      return getFallbackSport(sportId);
     }
 
     return mapSportRecord(sport);
   } catch {
-    return (
-      getHomeContentSync().carousel.slides.find((item) => item.id === sportId) ??
-      null
-    );
+    return getFallbackSport(sportId);
   }
 }
 
@@ -132,16 +212,7 @@ export async function getHomeContent(): Promise<HomeContent> {
         orderBy: {
           sortOrder: "asc",
         },
-        include: {
-          tags: {
-            orderBy: {
-              sortOrder: "asc",
-            },
-            include: {
-              tag: true,
-            },
-          },
-        },
+        include: sportInclude,
       }),
       prisma.homeSection.findMany(),
       prisma.homeTile.findMany({
@@ -160,8 +231,7 @@ export async function getHomeContent(): Promise<HomeContent> {
 
     return {
       carousel: {
-        kicker:
-          sectionMap.get("carousel")?.kicker ?? fallback.carousel.kicker,
+        kicker: sectionMap.get("carousel")?.kicker ?? fallback.carousel.kicker,
         title: sectionMap.get("carousel")?.title ?? fallback.carousel.title,
         slides: sports.map(mapSportRecord),
       },

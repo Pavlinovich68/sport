@@ -1,0 +1,2334 @@
+
+> sport@0.1.0 dev
+> next dev --port 3001
+
+▲ Next.js 16.2.4 (Turbopack)
+- Local:         http://localhost:3001
+- Network:       http://192.168.192.1:3001
+- Environments: .env
+✓ Ready in 887ms
+Creating turbopack project { dir: 'D:\\VS Code\\sport', testMode: true }
+
+○ Compiling / ...
+ GET /sports 200 in 9.2s (next.js: 7.8s, application-code: 1437ms)
+ GET / 200 in 9.2s (next.js: 7.6s, application-code: 1611ms)
+ GET /sports/football 200 in 9.2s (next.js: 9.0s, generate-params: 1518ms, application-code: 197ms)
+ GET / 200 in 856ms (next.js: 41ms, application-code: 816ms)
+ GET /api/auth/session 200 in 4.9s (next.js: 4.4s, application-code: 482ms)
+ GET /api/auth/session 200 in 262ms (next.js: 227ms, application-code: 35ms)
+ GET /sports/cross-country-skiing 200 in 261ms (next.js: 76ms, generate-params: 20ms, application-code: 186ms)
+ GET / 200 in 339ms (next.js: 13ms, application-code: 326ms)
+ GET /api/auth/session 200 in 68ms (next.js: 33ms, application-code: 35ms)
+ GET /api/auth/session 200 in 25ms (next.js: 8ms, application-code: 17ms)
+ GET /sports 200 in 110ms (next.js: 12ms, application-code: 98ms)
+ GET / 200 in 648ms (next.js: 125ms, application-code: 523ms)
+ GET /api/auth/session 200 in 67ms (next.js: 35ms, application-code: 32ms)
+ GET /api/auth/session 200 in 19ms (next.js: 9ms, application-code: 10ms)
+ GET /api/auth/session 200 in 9ms (next.js: 3ms, application-code: 6ms)
+ GET /sports/cycling 200 in 142ms (next.js: 44ms, generate-params: 7ms, application-code: 98ms)
+ GET /sports 200 in 275ms (next.js: 61ms, application-code: 214ms)
+ GET /sports/football 200 in 192ms (next.js: 29ms, generate-params: 17ms, application-code: 163ms)
+○ Compiling /_error ...
+ GET /sports/football 500 in 7.0s (next.js: 5.8s, application-code: 1274ms)
+ GET /sports 500 in 7.1s (next.js: 5.8s, application-code: 1266ms)
+ GET /sports/football 500 in 43ms (next.js: 21ms, application-code: 22ms)
+ GET /sports 500 in 64ms (next.js: 50ms, application-code: 14ms)
+ GET /sports/football 500 in 24ms (next.js: 9ms, application-code: 15ms)
+ GET /sports 500 in 45ms (next.js: 15ms, application-code: 31ms)
+ GET /sports/football 500 in 45ms (next.js: 28ms, application-code: 17ms)
+ GET /sports 500 in 22ms (next.js: 9ms, application-code: 12ms)
+ GET /sports 500 in 22ms (next.js: 9ms, application-code: 13ms)
+ GET /sports 500 in 29ms (next.js: 17ms, application-code: 12ms)
+ GET /sports 500 in 27ms (next.js: 9ms, application-code: 18ms)
+ GET /sports 500 in 22ms (next.js: 12ms, application-code: 10ms)
+ GET /sports 500 in 25ms (next.js: 14ms, application-code: 12ms)
+ GET /sports 500 in 21ms (next.js: 9ms, application-code: 12ms)
+ GET /sports 500 in 21ms (next.js: 10ms, application-code: 11ms)
+ GET /sports 500 in 20ms (next.js: 9ms, application-code: 10ms)
+ GET /sports 500 in 23ms (next.js: 9ms, application-code: 14ms)
+ GET /sports 500 in 22ms (next.js: 9ms, application-code: 14ms)
+ GET /sports 500 in 24ms (next.js: 11ms, application-code: 13ms)
+ GET /sports 500 in 34ms (next.js: 15ms, application-code: 18ms)
+✓ Compiled in 360ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:439:163
+
+  436 };
+  437 async function getSports() {
+  438     try {
+→ 439         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+ GET /sports 200 in 1622ms (next.js: 383ms, application-code: 1239ms)
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:439:163
+
+  436 };
+  437 async function getSports() {
+  438     try {
+→ 439         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+ GET /sports/football 500 in 363ms (next.js: 321ms, application-code: 43ms)
+ GET /sports 200 in 580ms (next.js: 8ms, application-code: 572ms)
+ GET /api/auth/session 200 in 163ms (next.js: 132ms, application-code: 31ms)
+ GET /api/auth/session 200 in 10ms (next.js: 3ms, application-code: 7ms)
+✓ Compiled in 290ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:473:163
+
+  470 };
+  471 async function getSports() {
+  472     try {
+→ 473         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:473:163
+
+  470 };
+  471 async function getSports() {
+  472     try {
+→ 473         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:473:163
+
+  470 };
+  471 async function getSports() {
+  472     try {
+→ 473         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:473:163
+
+  470 };
+  471 async function getSports() {
+  472     try {
+→ 473         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:473:163
+
+  470 };
+  471 async function getSports() {
+  472     try {
+→ 473         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:473:163
+
+  470 };
+  471 async function getSports() {
+  472     try {
+→ 473         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+ GET /sports 200 in 500ms (next.js: 151ms, application-code: 349ms)
+ GET /sports 200 in 241ms (next.js: 4ms, application-code: 236ms)
+ GET /sports 200 in 162ms (next.js: 43ms, application-code: 119ms)
+ GET /sports 200 in 164ms (next.js: 6ms, application-code: 158ms)
+ GET /sports 200 in 164ms (next.js: 80ms, application-code: 84ms)
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:473:163
+
+  470 };
+  471 async function getSports() {
+  472     try {
+→ 473         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+ GET /sports 200 in 88ms (next.js: 4ms, application-code: 84ms)
+ GET /sports 200 in 44ms (next.js: 4ms, application-code: 40ms)
+✓ Compiled in 43ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:473:163
+
+  470 };
+  471 async function getSports() {
+  472     try {
+→ 473         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+ GET /sports 200 in 451ms (next.js: 208ms, application-code: 243ms)
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:473:163
+
+  470 };
+  471 async function getSports() {
+  472     try {
+→ 473         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:473:163
+
+  470 };
+  471 async function getSports() {
+  472     try {
+→ 473         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+ GET /sports 200 in 137ms (next.js: 5ms, application-code: 132ms)
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:473:163
+
+  470 };
+  471 async function getSports() {
+  472     try {
+→ 473         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:473:163
+
+  470 };
+  471 async function getSports() {
+  472     try {
+→ 473         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:473:163
+
+  470 };
+  471 async function getSports() {
+  472     try {
+→ 473         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+ GET /sports 200 in 274ms (next.js: 5ms, application-code: 268ms)
+ GET /sports 200 in 209ms (next.js: 5ms, application-code: 203ms)
+ GET /sports 200 in 150ms (next.js: 7ms, application-code: 143ms)
+ GET /sports 200 in 80ms (next.js: 6ms, application-code: 74ms)
+✓ Compiled in 120ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:474:163
+
+  471 };
+  472 async function getSports() {
+  473     try {
+→ 474         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:474:163
+
+  471 };
+  472 async function getSports() {
+  473     try {
+→ 474         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:474:163
+
+  471 };
+  472 async function getSports() {
+  473     try {
+→ 474         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:474:163
+
+  471 };
+  472 async function getSports() {
+  473     try {
+→ 474         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:474:163
+
+  471 };
+  472 async function getSports() {
+  473     try {
+→ 474         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:474:163
+
+  471 };
+  472 async function getSports() {
+  473     try {
+→ 474         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+ GET /sports 200 in 780ms (next.js: 275ms, application-code: 505ms)
+ GET /sports 200 in 379ms (next.js: 7ms, application-code: 372ms)
+ GET /sports 200 in 275ms (next.js: 71ms, application-code: 204ms)
+ GET /sports 200 in 279ms (next.js: 13ms, application-code: 267ms)
+ GET /sports 200 in 278ms (next.js: 129ms, application-code: 150ms)
+ GET /sports 200 in 84ms (next.js: 9ms, application-code: 75ms)
+✓ Compiled in 539ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:475:163
+
+  472 };
+  473 async function getSports() {
+  474     try {
+→ 475         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:475:163
+
+  472 };
+  473 async function getSports() {
+  474     try {
+→ 475         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:475:163
+
+  472 };
+  473 async function getSports() {
+  474     try {
+→ 475         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:475:163
+
+  472 };
+  473 async function getSports() {
+  474     try {
+→ 475         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:475:163
+
+  472 };
+  473 async function getSports() {
+  474     try {
+→ 475         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:475:163
+
+  472 };
+  473 async function getSports() {
+  474     try {
+→ 475         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+ GET /sports 200 in 572ms (next.js: 166ms, application-code: 407ms)
+ GET /sports 200 in 294ms (next.js: 7ms, application-code: 287ms)
+ GET /sports 200 in 203ms (next.js: 8ms, application-code: 196ms)
+ GET /sports 200 in 207ms (next.js: 61ms, application-code: 146ms)
+ GET /sports 200 in 208ms (next.js: 111ms, application-code: 97ms)
+ GET /sports 200 in 51ms (next.js: 4ms, application-code: 47ms)
+✓ Compiled in 217ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:476:163
+
+  473 };
+  474 async function getSports() {
+  475     try {
+→ 476         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:476:163
+
+  473 };
+  474 async function getSports() {
+  475     try {
+→ 476         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:476:163
+
+  473 };
+  474 async function getSports() {
+  475     try {
+→ 476         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:476:163
+
+  473 };
+  474 async function getSports() {
+  475     try {
+→ 476         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+ GET /sports/football 500 in 1202ms (next.js: 1161ms, application-code: 42ms)
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:476:163
+
+  473 };
+  474 async function getSports() {
+  475     try {
+→ 476         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:476:163
+
+  473 };
+  474 async function getSports() {
+  475     try {
+→ 476         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+ GET /sports 200 in 3.2s (next.js: 1575ms, application-code: 1598ms)
+ GET /sports 200 in 1335ms (next.js: 8ms, application-code: 1327ms)
+ GET /sports 200 in 860ms (next.js: 22ms, application-code: 839ms)
+ GET /sports 200 in 861ms (next.js: 73ms, application-code: 788ms)
+ GET /sports 200 in 136ms (next.js: 5ms, application-code: 131ms)
+ GET /sports 200 in 100ms (next.js: 7ms, application-code: 92ms)
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:476:163
+
+  473 };
+  474 async function getSports() {
+  475     try {
+→ 476         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+✓ Compiled in 1058ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:476:163
+
+  473 };
+  474 async function getSports() {
+  475     try {
+→ 476         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:476:163
+
+  473 };
+  474 async function getSports() {
+  475     try {
+→ 476         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:476:163
+
+  473 };
+  474 async function getSports() {
+  475     try {
+→ 476         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:476:163
+
+  473 };
+  474 async function getSports() {
+  475     try {
+→ 476         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+ GET /sports 200 in 432ms (next.js: 146ms, application-code: 286ms)
+ GET /sports 200 in 176ms (next.js: 4ms, application-code: 172ms)
+ GET /sports 200 in 137ms (next.js: 4ms, application-code: 132ms)
+ GET /sports 200 in 138ms (next.js: 40ms, application-code: 98ms)
+ GET /sports 200 in 144ms (next.js: 75ms, application-code: 69ms)
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:476:163
+
+  473 };
+  474 async function getSports() {
+  475     try {
+→ 476         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:476:163
+
+  473 };
+  474 async function getSports() {
+  475     try {
+→ 476         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:476:163
+
+  473 };
+  474 async function getSports() {
+  475     try {
+→ 476         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:476:163
+
+  473 };
+  474 async function getSports() {
+  475     try {
+→ 476         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+ GET /sports 200 in 417ms (next.js: 150ms, application-code: 266ms)
+ GET /sports 200 in 156ms (next.js: 7ms, application-code: 149ms)
+ GET /sports 200 in 96ms (next.js: 5ms, application-code: 91ms)
+ GET /sports 200 in 97ms (next.js: 41ms, application-code: 56ms)
+✓ Compiled in 153ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:477:163
+
+  474 };
+  475 async function getSports() {
+  476     try {
+→ 477         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:477:163
+
+  474 };
+  475 async function getSports() {
+  476     try {
+→ 477         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:477:163
+
+  474 };
+  475 async function getSports() {
+  476     try {
+→ 477         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:477:163
+
+  474 };
+  475 async function getSports() {
+  476     try {
+→ 477         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:477:163
+
+  474 };
+  475 async function getSports() {
+  476     try {
+→ 477         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:477:163
+
+  474 };
+  475 async function getSports() {
+  476     try {
+→ 477         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+ GET /sports 200 in 519ms (next.js: 133ms, application-code: 386ms)
+ GET /sports 200 in 314ms (next.js: 5ms, application-code: 309ms)
+ GET /sports 200 in 236ms (next.js: 61ms, application-code: 174ms)
+ GET /sports 200 in 236ms (next.js: 101ms, application-code: 136ms)
+ GET /sports 200 in 242ms (next.js: 9ms, application-code: 233ms)
+ GET /sports 200 in 89ms (next.js: 6ms, application-code: 83ms)
+✓ Compiled in 113ms
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:477:163
+
+  474 };
+  475 async function getSports() {
+  476     try {
+→ 477         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:477:163
+
+  474 };
+  475 async function getSports() {
+  476     try {
+→ 477         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:477:163
+
+  474 };
+  475 async function getSports() {
+  476     try {
+→ 477         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:477:163
+
+  474 };
+  475 async function getSports() {
+  476     try {
+→ 477         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:477:163
+
+  474 };
+  475 async function getSports() {
+  476     try {
+→ 477         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+prisma:error 
+Invalid `__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany()` invocation in
+D:\VS Code\sport\.next\dev\server\chunks\ssr\[root-of-the-server]__13iwg5z._.js:477:163
+
+  474 };
+  475 async function getSports() {
+  476     try {
+→ 477         const sports = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$prisma$2e$ts__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["prisma"].sport.findMany({
+                orderBy: {
+                  sortOrder: "asc"
+                },
+                include: {
+                  tags: {
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      tag: true
+                    }
+                  },
+                  sportObjects: {
+                  ~~~~~~~~~~~~
+                    orderBy: {
+                      sortOrder: "asc"
+                    },
+                    include: {
+                      sportObject: {
+                        include: {
+                          paidServices: {
+                            orderBy: {
+                              sortOrder: "asc"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              })
+
+Unknown field `sportObjects` for include statement on model `Sport`. Available options are marked with ?.
+ GET /sports 200 in 498ms (next.js: 173ms, application-code: 325ms)
+ GET /sports 200 in 238ms (next.js: 5ms, application-code: 233ms)
+ GET /sports 200 in 186ms (next.js: 6ms, application-code: 180ms)
+ GET /sports 200 in 187ms (next.js: 44ms, application-code: 143ms)
+ GET /sports 200 in 186ms (next.js: 126ms, application-code: 61ms)
+ GET /sports 200 in 189ms (next.js: 87ms, application-code: 102ms)
+ GET /sports/football 500 in 522ms (next.js: 463ms, application-code: 59ms)
+ GET /sports/football 500 in 194ms (next.js: 171ms, application-code: 23ms)

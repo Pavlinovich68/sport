@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import SportObjectCard from "@/components/SportObjectCard";
 import { getSportById, getSports } from "@/lib/homeContent";
 import styles from "../../index.module.scss";
 
@@ -70,6 +71,25 @@ export default async function SportPage({ params }: SportPageProps) {
             </div>
           </div>
         </div>
+
+        {sport.sportObjects.length > 0 ? (
+          <section className={styles.sportObjectsSection}>
+            <div className={styles.sectionHeading}>
+              <p className={styles.sectionKicker}>Где заниматься</p>
+              <h2>Спортивные объекты</h2>
+            </div>
+
+            <div className={styles.sportObjectsGrid}>
+              {sport.sportObjects.map((sportObject) => (
+                <SportObjectCard
+                  key={sportObject.id}
+                  sportObject={sportObject}
+                  sportTitle={sport.title}
+                />
+              ))}
+            </div>
+          </section>
+        ) : null}
       </div>
     </section>
   );

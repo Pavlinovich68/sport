@@ -1,0 +1,288 @@
+.card {
+  display: grid;
+  grid-template-columns: minmax(170px, 42%) minmax(0, 1fr);
+  width: min(100%, 580px);
+  min-height: 180px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: #fff;
+  border: 1px solid rgba(24, 49, 39, 0.08);
+  box-shadow: 0 16px 34px rgba(16, 34, 29, 0.1);
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 42px rgba(16, 34, 29, 0.14);
+  }
+}
+
+.media {
+  position: relative;
+  min-height: 180px;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+  transition: transform 260ms ease;
+
+  .card:hover & {
+    transform: scale(1.03);
+  }
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(8, 16, 19, 0.08) 0%,
+    rgba(8, 16, 19, 0.12) 58%,
+    rgba(8, 16, 19, 0.26) 100%
+  );
+}
+
+.mediaBadges {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 1;
+  display: grid;
+  gap: 6px;
+}
+
+.primaryBadge,
+.secondaryBadge,
+.ratingBadge {
+  width: fit-content;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 12px 28px rgba(20, 28, 31, 0.12);
+}
+
+.primaryBadge,
+.secondaryBadge {
+  padding: 7px 10px;
+  color: #2a2a2a;
+  font-size: 0.62rem;
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.secondaryBadge {
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+
+.ratingBadge {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  z-index: 1;
+  min-width: 112px;
+  padding: 9px 12px 8px;
+  display: grid;
+  gap: 2px;
+  color: #404040;
+  font-size: 0.62rem;
+  font-weight: 600;
+}
+
+.stars {
+  color: #d6d6d6;
+  letter-spacing: 0.16em;
+  font-size: 0.82rem;
+  line-height: 1;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 14px 12px;
+}
+
+.title {
+  margin: 0;
+  color: #232323;
+  font-size: 1rem;
+  line-height: 1.08;
+  font-weight: 900;
+}
+
+.subtitle {
+  margin: 5px 0 0;
+  color: #a0a0a0;
+  font-size: 0.68rem;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.infoList {
+  margin-top: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+.infoItem {
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  color: #2d2d2d;
+  font-size: 0.68rem;
+  line-height: 1.45;
+}
+
+.infoIcon {
+  flex: 0 0 auto;
+  color: #cfcfcf;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+.divider {
+  margin: 10px 0;
+  height: 1px;
+  background: rgba(35, 35, 35, 0.12);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  border: 1.5px solid #39c54a;
+  color: #1faa36;
+  background: #fff;
+  font-size: 0.58rem;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.description {
+  margin: 10px 0 0;
+  color: #686868;
+  font-size: 0.65rem;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.priceBlock {
+  margin-top: 10px;
+  display: grid;
+  gap: 3px;
+
+  p {
+    margin: 0;
+    color: #232323;
+    font-size: 0.66rem;
+    line-height: 1.38;
+    font-weight: 400;
+  }
+}
+
+.actions {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.enrollButton {
+  min-height: 34px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 999px;
+  background: #ff1717;
+  color: #fff;
+  font-size: 0.74rem;
+  font-weight: 800;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+  box-shadow: 0 14px 28px rgba(255, 23, 23, 0.18);
+
+  &:hover {
+    transform: translateY(-1px);
+    background: #ed0f0f;
+    box-shadow: 0 18px 34px rgba(255, 23, 23, 0.24);
+  }
+}
+
+.moreLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #2b2b2b;
+  font-size: 0.74rem;
+  font-weight: 500;
+  transition:
+    color 180ms ease,
+    transform 180ms ease;
+
+  &::after {
+    content: "→";
+    color: #ff1717;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 400;
+  }
+
+  &:hover {
+    color: #111;
+    transform: translateX(2px);
+  }
+}
+
+@media (max-width: 760px) {
+  .card {
+    grid-template-columns: 1fr;
+    width: min(100%, 580px);
+    min-height: unset;
+  }
+
+  .media {
+    min-height: 220px;
+  }
+
+  .mediaBadges {
+    top: 14px;
+    left: 14px;
+  }
+
+  .ratingBadge {
+    left: 14px;
+    bottom: 14px;
+  }
+
+  .body {
+    padding: 18px 16px 16px;
+  }
+
+  .actions {
+    gap: 10px;
+  }
+
+  .enrollButton {
+    min-height: 34px;
+    padding: 0 14px;
+  }
+}

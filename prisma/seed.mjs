@@ -3,8 +3,8 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { PrismaPg } from "@prisma/adapter-pg";
+import { PrismaClient } from "@prisma/client";
 import { Pool } from "pg";
-import { PrismaClient } from "../src/generated/prisma/client.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const connectionString = process.env.DATABASE_URL;
@@ -29,8 +29,17 @@ async function main() {
     "data",
     "home-content.json",
   );
+  const sportObjectsPath = path.join(
+    __dirname,
+    "..",
+    "src",
+    "data",
+    "sport-objects.json",
+  );
   const raw = await readFile(contentPath, "utf8");
+  const rawSportObjects = await readFile(sportObjectsPath, "utf8");
   const content = JSON.parse(raw);
+  const sportObjectsContent = JSON.parse(rawSportObjects);
 
   await prisma.homeSection.upsert({
     where: { key: "carousel" },
@@ -167,6 +176,81 @@ async function main() {
       },
     },
   });
+
+  for (const sportObject of sportObjectsContent.sportObjects) {
+    await prisma.sportObject.upsert({
+      where: {
+        slug: sportObject.slug,
+      },
+      update: {
+        name: sportObject.name,
+        image: sportObject.image,
+        address: sportObject.address,
+        description: sportObject.description,
+        workingHours: sportObject.workingHours,
+        features: sportObject.features,
+      },
+      create: {
+        id: sportObject.id,
+        name: sportObject.name,
+        slug: sportObject.slug,
+        image: sportObject.image,
+        address: sportObject.address,
+        description: sportObject.description,
+        workingHours: sportObject.workingHours,
+        features: sportObject.features,
+      },
+    });
+
+    const currentObject = await prisma.sportObject.findUniqueOrThrow({
+      where: {
+        slug: sportObject.slug,
+      },
+    });
+
+    await prisma.paidService.deleteMany({
+      where: {
+        sportObjectId: currentObject.id,
+      },
+    });
+
+    for (const [serviceIndex, service] of sportObject.paidServices.entries()) {
+      await prisma.paidService.create({
+        data: {
+          sportObjectId: currentObject.id,
+          name: service.name,
+          description: service.description,
+          price: service.price,
+          sortOrder: serviceIndex,
+        },
+      });
+    }
+
+    await prisma.sportObjectSport.deleteMany({
+      where: {
+        sportObjectId: currentObject.id,
+      },
+    });
+
+    for (const [sportIndex, sportId] of sportObject.sportIds.entries()) {
+      await prisma.sportObjectSport.create({
+        data: {
+          sportId,
+          sportObjectId: currentObject.id,
+          sortOrder: sportIndex,
+        },
+      });
+    }
+  }
+
+  await prisma.sportObject.deleteMany({
+    where: {
+      slug: {
+        notIn: sportObjectsContent.sportObjects.map((sportObject) => sportObject.slug),
+      },
+    },
+  });
+
 }
 
 main()

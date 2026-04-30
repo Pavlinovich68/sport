@@ -8,6 +8,10 @@ generator client {
   output   = "../src/generated/prisma"
 }
 
+generator client_js {
+  provider = "prisma-client-js"
+}
+
 datasource db {
   provider = "postgresql"
 }
@@ -21,6 +25,7 @@ model Sport {
   image           String
   sortOrder       Int        @unique
   tags            SportTag[]
+  sportObjects    SportObjectSport[]
   createdAt       DateTime   @default(now())
   updatedAt       DateTime   @updatedAt
 }
@@ -41,6 +46,45 @@ model SportTag {
   tag        Tag      @relation(fields: [tagId], references: [id], onDelete: Cascade)
 
   @@id([sportId, tagId])
+}
+
+model SportObject {
+  id           String            @id @default(cuid())
+  name         String
+  slug         String            @unique
+  image        String            @default("")
+  address      String            @db.Text
+  description  String            @db.Text
+  workingHours String            @db.Text
+  features     String            @db.Text
+  paidServices PaidService[]
+  sports       SportObjectSport[]
+  createdAt    DateTime          @default(now())
+  updatedAt    DateTime          @updatedAt
+}
+
+model PaidService {
+  id            String      @id @default(cuid())
+  sportObjectId String
+  name          String
+  description   String      @db.Text
+  price         Decimal     @db.Decimal(10, 2)
+  sortOrder     Int
+  sportObject   SportObject @relation(fields: [sportObjectId], references: [id], onDelete: Cascade)
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  @@unique([sportObjectId, sortOrder])
+}
+
+model SportObjectSport {
+  sportId       String
+  sportObjectId String
+  sortOrder     Int
+  sport         Sport       @relation(fields: [sportId], references: [id], onDelete: Cascade)
+  sportObject   SportObject @relation(fields: [sportObjectId], references: [id], onDelete: Cascade)
+
+  @@id([sportId, sportObjectId])
 }
 
 model HomeSection {
