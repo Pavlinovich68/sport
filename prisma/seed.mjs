@@ -36,10 +36,19 @@ async function main() {
     "data",
     "sport-objects.json",
   );
+  const sportSectionsPath = path.join(
+    __dirname,
+    "..",
+    "src",
+    "data",
+    "sport-sections.json",
+  );
   const raw = await readFile(contentPath, "utf8");
   const rawSportObjects = await readFile(sportObjectsPath, "utf8");
+  const rawSportSections = await readFile(sportSectionsPath, "utf8");
   const content = JSON.parse(raw);
   const sportObjectsContent = JSON.parse(rawSportObjects);
+  const sportSectionsContent = JSON.parse(rawSportSections);
 
   await prisma.homeSection.upsert({
     where: { key: "carousel" },
@@ -247,6 +256,114 @@ async function main() {
     where: {
       slug: {
         notIn: sportObjectsContent.sportObjects.map((sportObject) => sportObject.slug),
+      },
+    },
+  });
+
+  for (const coach of sportSectionsContent.coaches) {
+    await prisma.coach.upsert({
+      where: {
+        slug: coach.slug,
+      },
+      update: {
+        fullName: coach.fullName,
+        role: coach.role,
+        bio: coach.bio,
+        achievements: coach.achievements,
+        experienceYears: coach.experienceYears,
+        phone: coach.phone,
+      },
+      create: {
+        id: coach.id,
+        slug: coach.slug,
+        fullName: coach.fullName,
+        role: coach.role,
+        bio: coach.bio,
+        achievements: coach.achievements,
+        experienceYears: coach.experienceYears,
+        phone: coach.phone,
+      },
+    });
+  }
+
+  for (const sportSection of sportSectionsContent.sportSections) {
+    const sportObject = await prisma.sportObject.findUniqueOrThrow({
+      where: {
+        slug: sportSection.sportObjectSlug,
+      },
+    });
+
+    await prisma.sportSection.upsert({
+      where: {
+        slug: sportSection.slug,
+      },
+      update: {
+        sportId: sportSection.sportId,
+        sportObjectId: sportObject.id,
+        title: sportSection.title,
+        image: sportSection.image,
+        schedule: sportSection.schedule,
+        ageRestrictions: sportSection.ageRestrictions,
+        description: sportSection.description,
+        level: sportSection.level,
+        capacity: sportSection.capacity,
+        contactPhone: sportSection.contactPhone,
+        monthlyPrice: sportSection.monthlyPrice,
+        trialPrice: sportSection.trialPrice,
+      },
+      create: {
+        id: sportSection.id,
+        slug: sportSection.slug,
+        sportId: sportSection.sportId,
+        sportObjectId: sportObject.id,
+        title: sportSection.title,
+        image: sportSection.image,
+        schedule: sportSection.schedule,
+        ageRestrictions: sportSection.ageRestrictions,
+        description: sportSection.description,
+        level: sportSection.level,
+        capacity: sportSection.capacity,
+        contactPhone: sportSection.contactPhone,
+        monthlyPrice: sportSection.monthlyPrice,
+        trialPrice: sportSection.trialPrice,
+      },
+    });
+
+    const currentSection = await prisma.sportSection.findUniqueOrThrow({
+      where: {
+        slug: sportSection.slug,
+      },
+    });
+
+    await prisma.sportSectionCoach.deleteMany({
+      where: {
+        sportSectionId: currentSection.id,
+      },
+    });
+
+    for (const [coachIndex, coachId] of sportSection.coachIds.entries()) {
+      await prisma.sportSectionCoach.create({
+        data: {
+          sportSectionId: currentSection.id,
+          coachId,
+          sortOrder: coachIndex,
+        },
+      });
+    }
+  }
+
+  await prisma.sportSection.deleteMany({
+    where: {
+      slug: {
+        notIn: sportSectionsContent.sportSections.map((sportSection) => sportSection.slug),
+      },
+    },
+  });
+
+  await prisma.coach.deleteMany({
+    where: {
+      sections: {
+        none: {},
       },
     },
   });

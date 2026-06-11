@@ -26,6 +26,7 @@ model Sport {
   sortOrder       Int        @unique
   tags            SportTag[]
   sportObjects    SportObjectSport[]
+  sportSections   SportSection[]
   createdAt       DateTime   @default(now())
   updatedAt       DateTime   @updatedAt
 }
@@ -59,6 +60,7 @@ model SportObject {
   features     String            @db.Text
   paidServices PaidService[]
   sports       SportObjectSport[]
+  sportSections SportSection[]
   createdAt    DateTime          @default(now())
   updatedAt    DateTime          @updatedAt
 }
@@ -85,6 +87,55 @@ model SportObjectSport {
   sportObject   SportObject @relation(fields: [sportObjectId], references: [id], onDelete: Cascade)
 
   @@id([sportId, sportObjectId])
+}
+
+model SportSection {
+  id               String              @id @default(cuid())
+  sportId          String
+  sportObjectId    String
+  title            String
+  slug             String              @unique
+  image            String              @default("")
+  schedule         String              @db.Text
+  ageRestrictions  String
+  description      String              @db.Text
+  level            String
+  capacity         Int
+  contactPhone     String
+  monthlyPrice     Decimal             @db.Decimal(10, 2)
+  trialPrice       Decimal             @db.Decimal(10, 2)
+  coaches          SportSectionCoach[]
+  sport            Sport               @relation(fields: [sportId], references: [id], onDelete: Cascade)
+  sportObject      SportObject         @relation(fields: [sportObjectId], references: [id], onDelete: Cascade)
+  createdAt        DateTime            @default(now())
+  updatedAt        DateTime            @updatedAt
+
+  @@index([sportId])
+  @@index([sportObjectId])
+}
+
+model Coach {
+  id              String              @id @default(cuid())
+  slug            String              @unique
+  fullName        String
+  role            String
+  bio             String              @db.Text
+  achievements    String              @db.Text
+  experienceYears Int
+  phone           String
+  sections        SportSectionCoach[]
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+}
+
+model SportSectionCoach {
+  sportSectionId String
+  coachId        String
+  sortOrder      Int
+  sportSection   SportSection @relation(fields: [sportSectionId], references: [id], onDelete: Cascade)
+  coach          Coach        @relation(fields: [coachId], references: [id], onDelete: Cascade)
+
+  @@id([sportSectionId, coachId])
 }
 
 model HomeSection {

@@ -17,6 +17,34 @@ export type PaidServiceContent = {
   price: string;
 };
 
+export type CoachContent = {
+  id: string;
+  slug: string;
+  fullName: string;
+  role: string;
+  bio: string;
+  achievements: string;
+  experienceYears: number;
+  phone: string;
+};
+
+export type SportSectionContent = {
+  id: string;
+  slug: string;
+  title: string;
+  image: string;
+  schedule: string;
+  ageRestrictions: string;
+  description: string;
+  level: string;
+  capacity: number;
+  contactPhone: string;
+  monthlyPrice: string;
+  trialPrice: string;
+  sportObjectSlug: string;
+  coaches: CoachContent[];
+};
+
 export type SportObjectContent = {
   id: string;
   name: string;
@@ -31,6 +59,7 @@ export type SportObjectContent = {
 
 export type SportContent = HomeCarouselSlide & {
   sportObjects: SportObjectContent[];
+  sportSections: SportSectionContent[];
 };
 
 export type HomeTile = {
@@ -61,13 +90,14 @@ function getFallbackSport(sportId: string): SportContent | null {
     (item) => item.id === sportId,
   );
 
-  return fallback ? { ...fallback, sportObjects: [] } : null;
+  return fallback ? { ...fallback, sportObjects: [], sportSections: [] } : null;
 }
 
 function getFallbackSports(): SportContent[] {
   return getHomeContentSync().carousel.slides.map((sport) => ({
     ...sport,
     sportObjects: [],
+    sportSections: [],
   }));
 }
 
@@ -105,6 +135,40 @@ function mapSportRecord(sport: {
       }>;
     };
   }>;
+  sportSections: Array<{
+    id: string;
+    slug: string;
+    title: string;
+    image: string;
+    schedule: string;
+    ageRestrictions: string;
+    description: string;
+    level: string;
+    capacity: number;
+    contactPhone: string;
+    monthlyPrice: {
+      toString(): string;
+    };
+    trialPrice: {
+      toString(): string;
+    };
+    sportObject: {
+      slug: string;
+    };
+    coaches: Array<{
+      sortOrder: number;
+      coach: {
+        id: string;
+        slug: string;
+        fullName: string;
+        role: string;
+        bio: string;
+        achievements: string;
+        experienceYears: number;
+        phone: string;
+      };
+    }>;
+  }>;
 }): SportContent {
   return {
     id: sport.id,
@@ -135,6 +199,33 @@ function mapSportRecord(sport: {
             price: service.price.toString(),
           })),
       })),
+    sportSections: sport.sportSections.map((section) => ({
+      id: section.id,
+      slug: section.slug,
+      title: section.title,
+      image: section.image,
+      schedule: section.schedule,
+      ageRestrictions: section.ageRestrictions,
+      description: section.description,
+      level: section.level,
+      capacity: section.capacity,
+      contactPhone: section.contactPhone,
+      monthlyPrice: section.monthlyPrice.toString(),
+      trialPrice: section.trialPrice.toString(),
+      sportObjectSlug: section.sportObject.slug,
+      coaches: section.coaches
+        .sort((left, right) => left.sortOrder - right.sortOrder)
+        .map((item) => ({
+          id: item.coach.id,
+          slug: item.coach.slug,
+          fullName: item.coach.fullName,
+          role: item.coach.role,
+          bio: item.coach.bio,
+          achievements: item.coach.achievements,
+          experienceYears: item.coach.experienceYears,
+          phone: item.coach.phone,
+        })),
+    })),
   };
 }
 
@@ -159,6 +250,23 @@ const sportInclude = {
               sortOrder: "asc" as const,
             },
           },
+        },
+      },
+    },
+  },
+  sportSections: {
+    include: {
+      sportObject: {
+        select: {
+          slug: true,
+        },
+      },
+      coaches: {
+        orderBy: {
+          sortOrder: "asc" as const,
+        },
+        include: {
+          coach: true,
         },
       },
     },
