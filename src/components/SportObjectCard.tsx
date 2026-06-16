@@ -1,47 +1,158 @@
 import Image from "next/image";
-import Link from "next/link";
 import type { SportObjectContent } from "@/lib/homeContent";
 import styles from "./SportObjectCard.module.scss";
 
 type SportObjectCardProps = {
+  eventIndex: number;
   sportObject: SportObjectContent;
   sportTitle: string;
 };
 
-function getDescriptionExcerpt(text: string) {
-  const [firstParagraph] = text.split("\n\n");
+function getEventTitle(sportTitle: string, eventIndex: number) {
+  const eventTitles: Record<string, string[]> = {
+    Баскетбол: [
+      "Открытый турнир по баскетболу 3x3 среди городских команд",
+      "Матч школьной баскетбольной лиги «Орбита» : «Старт»",
+      "Кубок выходного дня по баскетболу среди любительских сборных",
+    ],
+    Биатлон: [
+      "Зимняя биатлонная гонка с огневыми рубежами",
+      "Открытый старт по биатлону на короткой дистанции",
+      "Кубок юных биатлонистов на приз спортивной школы",
+    ],
+    Бокс: [
+      "Открытый боксерский вечер с финальными поединками",
+      "Турнир начинающих боксеров Золотые перчатки",
+      "Матчевая встреча боксерских клубов «Север» : «Урал»",
+    ],
+    Велоспорт: [
+      "Городская велогонка на выносливость",
+      "Критериум по велоспорту среди любительских команд",
+      "Открытый заезд Велодень на кольцевой трассе",
+    ],
+    Волейбол: [
+      "Кубок по волейболу среди смешанных команд",
+      "Матч городской волейбольной лиги «Импульс» : «Высота»",
+      "Открытый турнир по пляжному волейболу",
+    ],
+    Гандбол: [
+      "Матч по гандболу городской лиги «Южный Урал» : «Молния»",
+      "Кубок юношеских команд по гандболу",
+      "Открытый турнир по гандболу среди школьных сборных",
+    ],
+    Дзюдо: [
+      "Турнир по дзюдо среди юниоров Путь чемпиона",
+      "Открытое первенство по дзюдо в весовых категориях",
+      "Командные встречи дзюдоистов «Восток» : «Олимп»",
+    ],
+    "Легкая атлетика": [
+      "Легкоатлетический старт на короткие дистанции",
+      "Городской забег Золотая дорожка",
+      "Открытое первенство по прыжкам и беговым дисциплинам",
+    ],
+    "Лёгкая атлетика": [
+      "Легкоатлетический старт на короткие дистанции",
+      "Городской забег Золотая дорожка",
+      "Открытое первенство по прыжкам и беговым дисциплинам",
+    ],
+    "Лыжные гонки": [
+      "Лыжная гонка выходного дня классическим стилем",
+      "Зимний марафон на приз спортивной школы",
+      "Командная эстафета по лыжным гонкам Северная петля",
+    ],
+    Плавание: [
+      "Заплыв на короткой воде среди юных спортсменов",
+      "Кубок бассейна по плаванию вольным стилем",
+      "Открытые старты по плаванию на спринтерских дистанциях",
+    ],
+    Регби: [
+      "Матч по регби городской серии «Сталь» : «Уралец»",
+      "Турнир по регби-7 среди молодежных команд",
+      "Открытая игра по регби на кубок района",
+    ],
+    Скалолазание: [
+      "Соревнование на скорость по скалолазанию",
+      "Боулдеринг-турнир Вертикаль для начинающих",
+      "Открытый кубок по трудности на искусственном рельефе",
+    ],
+    Сноуборд: [
+      "Сноуборд-контест по джиббингу и фристайлу",
+      "Открытые старты по сноуборд-кроссу",
+      "Зимний фестиваль трюков на сноуборде",
+    ],
+    Теннис: [
+      "Открытый теннисный матч в одиночном разряде",
+      "Турнир выходного дня Большая подача",
+      "Кубок любительской теннисной лиги",
+    ],
+    "Настольный теннис": [
+      "Турнир по настольному теннису Быстрая ракетка",
+      "Матчевая встреча клубов «Спин» : «Топс»",
+      "Открытое первенство по настольному теннису",
+    ],
+    Футбол: [
+      "Товарищеский матч юношеской премьер-лиги «Металист» : «Динамо»",
+      "Кубковая игра городской футбольной лиги «Урал» : «Метеор»",
+      "Открытый турнир по мини-футболу среди дворовых команд",
+      "Матч за суперкубок школьной лиги «Форвард» : «Олимп»",
+    ],
+    "Фигурное катание": [
+      "Показательные прокаты юных фигуристов Ледовая симфония",
+      "Открытый фестиваль программ по фигурному катанию",
+      "Кубок начинающих фигуристов Серебряный конек",
+    ],
+    Хоккей: [
+      "Хоккейный матч молодежной лиги «Трактор» : «Спутник»",
+      "Кубковая встреча на льду «Север» : «Молот»",
+      "Открытый турнир по хоккею среди юношеских команд",
+    ],
+    Шахматы: [
+      "Шахматный турнир Быстрая партия",
+      "Открытое первенство по рапиду среди школьников",
+      "Матчевая встреча шахматных клубов «Дебют» : «Эндшпиль»",
+    ],
+  };
 
-  return firstParagraph ?? text;
-}
-
-function getObjectFeatureLabels(features: string) {
-  const labels = [
-    "Учебно-тренировочный",
-    "Физкультурно-оздоровительный",
-    "Соревновательный",
-    "Частный",
-    "Открытый",
-    "Крытый",
+  const titles = eventTitles[sportTitle] ?? [
+    `Открытое мероприятие по виду спорта ${sportTitle}`,
+    `Городской турнир по виду спорта ${sportTitle}`,
+    `Кубковая встреча по виду спорта ${sportTitle}`,
   ];
 
-  return labels.filter((label) => features.includes(label)).slice(0, 3);
+  return titles[eventIndex % titles.length];
 }
 
-function getPriceLines(sportObject: SportObjectContent) {
-  return sportObject.paidServices.slice(0, 2).map((service) => {
-    const amount = Number(service.price);
-    const safeAmount = Number.isFinite(amount) ? amount : 0;
+function getAttendancePrice(sportObject: SportObjectContent, eventIndex: number) {
+  if (eventIndex % 3 === 2) {
+    return "Бесплатно";
+  }
 
-    return `${safeAmount.toLocaleString("ru-RU")} рублей`;
-  });
+  const service = sportObject.paidServices[eventIndex % sportObject.paidServices.length];
+  const amount = Number(service?.price);
+  const safeAmount = Number.isFinite(amount) && amount > 0 ? amount : 500;
+
+  return `${safeAmount.toLocaleString("ru-RU")} рублей`;
+}
+
+function getEventDateTime(eventIndex: number) {
+  const dateTimes = [
+    "18 июля 2026, 16:00",
+    "24 июля 2026, 19:30",
+    "1 августа 2026, 12:00",
+    "9 августа 2026, 17:00",
+  ];
+
+  return dateTimes[eventIndex % dateTimes.length];
 }
 
 export default function SportObjectCard({
+  eventIndex,
   sportObject,
   sportTitle,
 }: SportObjectCardProps) {
-  const featureLabels = getObjectFeatureLabels(sportObject.features);
-  const priceLines = getPriceLines(sportObject);
+  const eventTitle = getEventTitle(sportTitle, eventIndex);
+  const eventDateTime = getEventDateTime(eventIndex);
+  const attendancePrice = getAttendancePrice(sportObject, eventIndex);
 
   return (
     <article className={styles.card} id={`sport-object-${sportObject.slug}`}>
@@ -56,60 +167,34 @@ export default function SportObjectCard({
         <div className={styles.overlay} />
         <div className={styles.mediaBadges}>
           <span className={styles.primaryBadge}>{sportTitle}</span>
-          <span className={styles.secondaryBadge}>
-            {sportObject.paidServices.length} услуги
-          </span>
-        </div>
-        <div className={styles.ratingBadge}>
-          <span className={styles.stars}>★★★★★</span>
-          <span>спортивный объект</span>
         </div>
       </div>
 
       <div className={styles.body}>
-        <h2 className={styles.title}>{sportObject.name}</h2>
-        <p className={styles.subtitle}>Спортивный объект для регулярных занятий</p>
+        <p className={styles.eventTitle}>{eventTitle}</p>
 
-        <div className={styles.infoList}>
-          <p className={styles.infoItem}>
-            <span className={styles.infoIcon}>•</span>
-            <span>{sportObject.address}</span>
-          </p>
-          <p className={styles.infoItem}>
-            <span className={styles.infoIcon}>•</span>
-            <span>{sportObject.workingHours}</span>
-          </p>
-        </div>
+        <p className={styles.eventDateTime}>{eventDateTime}</p>
+
+        <p className={styles.priceLine}>
+          <span>Стоимость посещения:</span> {attendancePrice}
+        </p>
 
         <div className={styles.divider} />
 
-        <div className={styles.tags}>
-          {featureLabels.map((label) => (
-            <span key={label} className={styles.tag}>
-              {label}
-            </span>
-          ))}
-        </div>
+        <h2 className={styles.title}>{sportObject.name}</h2>
 
-        <p className={styles.description}>
-          {getDescriptionExcerpt(sportObject.description)}
-        </p>
-
-        <div className={styles.priceBlock}>
-          {priceLines.map((line) => (
-            <p key={line}>{line}</p>
-          ))}
+        <div className={styles.infoList}>
+          <p className={styles.infoItem}>
+            <span>{sportObject.address}</span>
+          </p>
         </div>
 
         <div className={styles.divider} />
 
         <div className={styles.actions}>
           <button type="button" className={styles.enrollButton}>
-            Записаться
-          </button>
-          <Link href={`#sport-object-${sportObject.slug}`} className={styles.moreLink}>
             Подробнее
-          </Link>
+          </button>
         </div>
       </div>
     </article>
