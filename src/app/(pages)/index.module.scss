@@ -102,6 +102,16 @@
   isolation: isolate;
 }
 
+// .image {
+//   object-fit: cover;
+//   object-position: center;
+//   transition: transform 260ms ease;
+
+//   .card:hover & {
+//     transform: scale(1.03);
+//   }
+// }
+
 .heroImage {
   object-fit: cover;
   object-position: center;
@@ -436,15 +446,29 @@
 }
 
 .sportDetailDescription {
-  display: grid;
-  gap: 18px;
+  color: #355447;
+  font-size: 1rem;
+  line-height: 1.9;
 
   p {
-    margin: 0;
-    color: #355447;
-    font-size: 1rem;
-    line-height: 1.9;
+    margin: 0 0 18px;
   }
+
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+
+.image {
+  float: left;
+  margin: 0 24px 16px 0;
+  border-radius: 18px;
+
+  object-fit: cover;
+  object-position: center;
+  transition: transform 260ms ease;
 }
 
 .sportObjectsSection {

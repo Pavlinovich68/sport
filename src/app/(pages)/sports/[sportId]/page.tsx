@@ -6,6 +6,7 @@ import CoachCard from "@/components/CoachCard";
 import SportObjectCard from "@/components/SportObjectCard";
 import { getSportById, getSports } from "@/lib/homeContent";
 import styles from "../../index.module.scss";
+import SportSectionCard from "@/components/SportSectionCard";
 
 type SportPageProps = {
   params: Promise<{
@@ -174,6 +175,7 @@ export default async function SportPage({ params }: SportPageProps) {
       })),
     )
     .slice(0, 4);
+  const sections = sport.sportSections.slice(0,4);
   const broadcastTitles = getBroadcastTitles(sport.title);
   const broadcastImages = [
     sport.image,
@@ -223,7 +225,16 @@ export default async function SportPage({ params }: SportPageProps) {
           <div className={styles.sportDetailMain}>
             <div className={styles.sportDetailPanel}>
               <p className={styles.sectionKicker}>Описание</p>
+
               <div className={styles.sportDetailDescription}>
+                <Image
+                  src={sport.image}
+                  alt={sport.title}
+                  width={350}
+                  height={400}
+                  className={styles.image}
+                />
+
                 {sport.fullDescription.split("\n\n").map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
@@ -255,6 +266,29 @@ export default async function SportPage({ params }: SportPageProps) {
             </div>
           </section>
         ) : null}
+
+        {
+          sections.length > 0 ? (
+            <section className={styles.sportObjectsSection}>
+              <div className={styles.sectionHeadingRow}>
+              <div className={styles.sectionHeading}>
+                <h2>Спортивные школы</h2>
+              </div>
+              <Link href="/sports" className={styles.catalogButton}>
+                Все спортивные школы
+              </Link>
+            </div>  
+
+              <div className={styles.sportObjectsGrid}>
+                {
+                  sections.map((item, index) => (
+                    <SportSectionCard key={item.id} sportSection={item} eventIndex={index}/>
+                  ))
+                }
+              </div>
+            </section>
+          ) : null
+        }
 
         {coaches.length > 0 ? (
           <section className={styles.coachesSection}>
