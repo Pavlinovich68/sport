@@ -451,11 +451,33 @@
   padding: 0 0 72px;
 }
 
+.coachesSection {
+  padding: 0 0 72px;
+}
+
+.broadcastsSection {
+  padding: 0 0 72px;
+}
+
 .sportObjectsGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 28px;
   justify-items: center;
+}
+
+.coachesGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  justify-items: center;
+}
+
+.broadcastsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 280px));
+  gap: 24px;
+  justify-content: center;
 }
 
 .catalogSection {
@@ -521,6 +543,12 @@
 }
 
 @media (max-width: 1024px) {
+  .coachesGrid,
+  .broadcastsGrid {
+    grid-template-columns: repeat(2, minmax(0, 280px));
+    justify-content: center;
+  }
+
   .tiles {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -592,6 +620,12 @@
   .sportObjectsGrid {
     grid-template-columns: 1fr;
     gap: 22px;
+  }
+
+  .coachesGrid,
+  .broadcastsGrid {
+    grid-template-columns: minmax(0, 280px);
+    justify-content: center;
   }
 
   .tiles {

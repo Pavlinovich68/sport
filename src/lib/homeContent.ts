@@ -42,6 +42,7 @@ export type SportSectionContent = {
   monthlyPrice: string;
   trialPrice: string;
   sportObjectSlug: string;
+  sportObjectAddress: string;
   coaches: CoachContent[];
 };
 
@@ -154,6 +155,7 @@ function mapSportRecord(sport: {
     };
     sportObject: {
       slug: string;
+      address: string;
     };
     coaches: Array<{
       sortOrder: number;
@@ -213,6 +215,7 @@ function mapSportRecord(sport: {
       monthlyPrice: section.monthlyPrice.toString(),
       trialPrice: section.trialPrice.toString(),
       sportObjectSlug: section.sportObject.slug,
+      sportObjectAddress: section.sportObject.address,
       coaches: section.coaches
         .sort((left, right) => left.sortOrder - right.sortOrder)
         .map((item) => ({
@@ -259,6 +262,7 @@ const sportInclude = {
       sportObject: {
         select: {
           slug: true,
+          address: true,
         },
       },
       coaches: {
