@@ -21,7 +21,7 @@ services:
     restart: "no"
     environment:
       DATABASE_URL: postgresql://postgres:123456qwerty@db:5432/sport
-      NEXTAUTH_URL: http://localhost:3000
+      NEXTAUTH_URL: http://localhost:3010
       NEXTAUTH_SECRET: your-secret-key-change-in-production
       GOOGLE_CLIENT_ID: ""
       GOOGLE_CLIENT_SECRET: ""
@@ -36,15 +36,15 @@ services:
       target: runner
     restart: unless-stopped
     ports:
-      - "3000:3000"
+      - "3010:3010"
     environment:
       DATABASE_URL: postgresql://postgres:123456qwerty@db:5432/sport
-      NEXTAUTH_URL: http://localhost:3000
+      NEXTAUTH_URL: http://localhost:3010
       NEXTAUTH_SECRET: your-secret-key-change-in-production
       GOOGLE_CLIENT_ID: ""
       GOOGLE_CLIENT_SECRET: ""
       NODE_ENV: production
-      PORT: 3000
+      PORT: 3010
       HOSTNAME: 0.0.0.0
     depends_on:
       db:
